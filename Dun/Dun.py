@@ -7,8 +7,8 @@ import urllib
 import urllib.request
 import urllib.parse
 import json
-
 from PIL import Image,ImageTk
+
 from PlayerInformation import *
 from SubWindow import *
 
@@ -29,6 +29,7 @@ limit = ""
 #PC방 정보용 데이터
 
 class DUN:
+    User = PlayerInformation()
     def __init__(self):
         window = Tk()
         window.title("-던-")
@@ -81,6 +82,12 @@ class DUN:
         self.player_list.config(yscrollcommand=self.Scrollbar.set)
         self.Scrollbar.config(command=self.player_list.yview)
         self.player_list.bind("<<ListboxSelect>>", self.selectListBoxEvent)
+        self.charImage = Label(self.frame1)
+
+        self.searchButton = Button(self.frame1, text="정보 보기",width=10,height=2, command=self.searchAdvanced)
+        self.searchButton['state'] = 'disabled'
+        self.searchButton['bg'] = 'light gray'
+        self.searchButton.place(x=130, y=500)
 
     def searchCharEvent(self, event):
         self.searchChar()
@@ -112,10 +119,24 @@ class DUN:
         self.searchList = json.loads(result)
         self.player_list.delete(0, END)
         for i in range(len(self.searchList['rows'])):
-            self.player_list.insert(i + 1, "명성: "+str(self.searchList['rows'][i]['fame'])+ ". 이름: "+
+            for j in range(len(self.Game_servers['rows'])):
+                if self.Game_servers['rows'][j]['serverId'] == self.searchList['rows'][i]['serverId']:
+                    servername = self.Game_servers['rows'][j]['serverName']
+                    break
+            self.player_list.insert(i + 1, servername +", 명성:"+str(self.searchList['rows'][i]['fame'])+ ", 이름: "+
                                     self.searchList['rows'][i]['characterName'])
     def selectPlayer(self):
-        print(self.searchList['rows'][self.player_list.curselection()[0]])
+        self.User.initBasicInfo(self.searchList['rows'][self.player_list.curselection()[0]])
+        self.charImage.destroy()
+        self.charImage = Label(self.frame1, image=self.User.characterImage, bg="white")
+        self.charImage.Image = self.User.characterImage
+        self.charImage.place(x = 350, y = 100)
+        self.searchButton['state'] = 'active'
+        self.searchButton['bg'] = 'white'
+
+    def searchAdvanced(self):
+        self.User.initAdvancedInfo()
+
 
 
 
