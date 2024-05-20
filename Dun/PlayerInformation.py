@@ -55,7 +55,6 @@ class equipment:        # 장비가 공통적으로 가지는 요소
         self.amplificationName = jsonData['amplificationName']
         self.refine = jsonData['refine']
 
-
         self.equipmentImageUrl = "https://"+api_image_server_d+"/df/items/"+self.itemId
         if "enchant" in jsonData:
             self.isenchant = True
@@ -65,29 +64,55 @@ class equipment:        # 장비가 공통적으로 가지는 요소
 class WEAPON(equipment):       # 무기
     isFusion = False           # 융합이냐?
     isAsrahan = False          # 아스라한이냐?
+    isCustom = False          # 불가침이냐?
+    isFixed = False            # 고정픽인가?
     def initInfo(self, jsonData): # 이 json 데이터는 무기 정보만 아래 칭호와 방어구도 그에 따른 json 넘겨주기
         self.initEqInfo(jsonData)
         self.isFusion = False
         self.isAsrahan = False
+        self.isCustom = False
         if "fusionOption" in jsonData:
             self.isFusion = True
-            self.FusionOption = jsonData['fusionOption']    # 융합 옵션
+            self.fusionOption = jsonData['fusionOption']    # 융합 옵션
             self.upgradeInfo = jsonData['upgradeInfo']      # 융합 장비 Id 및 이름
         elif "asrahanOption" in jsonData:
             self.isAsrahan = True
+            self.asrahanOption = jsonData['asrahanOption']
+        if "customOption" in jsonData:
+            self.isCustom = True
+            self.customOption = jsonData['customOption']
+        elif "fixedOption" in jsonData:
+            self.isFixed = True
+            self.fixedOption = jsonData['fixedOption']
+
 
 
 
 class TITLE(equipment):
     def initInfo(self, jsonData):
         self.initEqInfo(jsonData)
-        pass
 
 class DEFENSEGEAR(equipment):   # 무기 이외의 장비들
     isMistGear = False
+    isFixed = False
+    isCustom = False
+    isFusion = False
     def initInfo(self, jsonData):
         self.initEqInfo(jsonData)
-        pass
+        if "fusionOption" in jsonData:
+            self.isFusion = True
+            self.fusionOption = jsonData['fusionOption']
+            self.upgradeInfo = jsonData['upgradeInfo']
+        if "customOption" in jsonData:
+            self.isCustom = True
+            self.customOption = jsonData['customOption']
+        if "fixedOption" in jsonData:
+            self.isFixed = True
+            self.fixedOption = jsonData['fixedOption']
+        if "mistGear" in jsonData or "pureMistGear" in jsonData or "refinedMistGear" in jsonData:
+            self.isMistGear = True
+
+
     
     
 class PlayerInformation:
@@ -109,6 +134,7 @@ class PlayerInformation:
         self.fame = jsonData['fame']
         # 캐릭터 이미지 읽기 및 저장
         url = "https://"+api_image_server_d+"/df/servers/"+self.serverId+"/characters/"+self.characterId+"?zoom=2"
+        print(url)
         with urllib.request.urlopen(url) as u:
             raw_data = u.read()
         im = Image.open(BytesIO(raw_data))

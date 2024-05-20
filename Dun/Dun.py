@@ -30,9 +30,11 @@ limit = ""
 
 class DUN:
     User = PlayerInformation()
+    InfomationWindow = CharacterInformation()
     def __init__(self):
         window = Tk()
         window.title("-던-")
+        window.geometry("800x600")
         notebook = tkinter.ttk.Notebook(window, width= 800, height=600)
         notebook.pack()
         self.frame1 = Frame(window)
@@ -58,6 +60,10 @@ class DUN:
         #Game_servers['rows'][0]['serverId'] = cain
     def ReadyInterface(self):
         # 1번 노트패드
+        photo = PhotoImage(file="resource/1page.gif")
+        imageLabel = Label(self.frame1, image=photo)
+        imageLabel.image=photo
+        imageLabel.pack()
         Label(self.frame1, text="서버 선택").place(x=50, y=30)
         self.selected_server = StringVar()
         self.selected_server.set("전체")
@@ -67,11 +73,11 @@ class DUN:
         tkinter.ttk.Combobox(self.frame1, textvariable=self.selected_server, values=t_list).place(x=50, y=50)
 
         self.searchName = StringVar()
-        self.searchEntry = Entry(self.frame1, textvariable=self.searchName, width= 65)
+        self.searchEntry = Entry(self.frame1, textvariable=self.searchName, width= 25)
         Label(self.frame1, text="이름 입력").place(x=260, y=29)
         self.searchEntry.place(x=260, y = 50)
         self.searchEntry.bind("<Return>", self.searchCharEvent)
-        Button(self.frame1, text="검색", command=self.searchChar).place(x=720, y=45)
+        Button(self.frame1, text="검색", command=self.searchChar).place(x=450, y=45)
 
         tframe = Frame(self.frame1, width=40, height=20)
         tframe.place(x=50, y=150)
@@ -129,7 +135,7 @@ class DUN:
     def selectPlayer(self):
         self.User.initBasicInfo(self.searchList['rows'][self.player_list.curselection()[0]])
         self.charImage.destroy()
-        self.charImage = Label(self.frame1, image=self.User.characterImage, bg="white")
+        self.charImage = Label(self.frame1, image=self.User.characterImage, bg='white')
         self.charImage.Image = self.User.characterImage
         self.charImage.place(x = 350, y = 100)
         self.searchButton['state'] = 'active'
@@ -137,6 +143,10 @@ class DUN:
 
     def searchAdvanced(self):
         self.User.initAdvancedInfo()
+        if self.InfomationWindow.isCreated:
+            self.InfomationWindow.destroyWindow()
+        self.InfomationWindow.initUserInfo(self.User)
+        self.InfomationWindow.createWindow()
 
 
 
