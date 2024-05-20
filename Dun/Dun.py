@@ -67,10 +67,11 @@ class DUN:
         tkinter.ttk.Combobox(self.frame1, textvariable=self.selected_server, values=t_list).place(x=50, y=50)
 
         self.searchName = StringVar()
-        self.searchEntry = Entry(self.frame1, textvariable=self.searchName, width= 40)
+        self.searchEntry = Entry(self.frame1, textvariable=self.searchName, width= 65)
+        Label(self.frame1, text="이름 입력").place(x=260, y=29)
         self.searchEntry.place(x=260, y = 50)
         self.searchEntry.bind("<Return>", self.searchCharEvent)
-        Button(self.frame1, text="검색", command=self.searchChar).place(x=550, y=45)
+        Button(self.frame1, text="검색", command=self.searchChar).place(x=720, y=45)
 
         tframe = Frame(self.frame1, width=40, height=20)
         tframe.place(x=50, y=150)

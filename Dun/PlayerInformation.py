@@ -39,10 +39,28 @@ class PlayerInformation:
         print(equimentjson)
 
 class equipment:
+    slotId = ""
+    slotName = ""
+    itemId = ""
+    itemName = ""
+    itemTypeId = ""
+    itemType = ""
+    itemTypeDetailedId = ""
+    itemTypeDeatil = ""
+    itemAvailableLevel = 0
+    itemRarity = ""
+    setItemId = ""
+    setItemName = ""
+    reinforce = 0
+    amplificationName = ""
+    refine = ""
+
+    equipmentImageUrl = ""
+
     def initEqInfo(self):
         pass
 
-class WEAPON:       # 무기
+class WEAPON(equipment):       # 무기
     def initWeaponInfo(self):
         pass
 
