@@ -10,8 +10,93 @@ api_server_d = "api.neople.co.kr"
 api_image_server_d = "img-api.neople.co.kr"
 service_key_d = "XseeTsrayJvhvwg8IATRWhpPXb2nZ2DP"
 
+
+equipmentEnum = {"WEAPON": 0, "TITLE": 1, "JACKET" : 2, "SHOULDER": 3, "PANTS": 4
+                 , "SHOES": 5, "WAIST": 6, "AMULET": 7, "WRIST": 8, "RING": 9
+                 , "SUPPORT": 10, "MAGIC_STON": 11, "EARRING": 12}
+
+
+class equipment:        # 장비가 공통적으로 가지는 요소
+    isequip = False     # 이 장비를 장착 했나?
+    isenchant = False   # 마법 부여 여부
+    slotId = ""
+    slotName = ""
+    itemId = ""
+    itemName = ""
+    itemTypeId = ""
+    itemType = ""
+    itemTypeDetailId = ""
+    itemTypeDetail = ""
+    itemAvailableLevel = 0  # 징칙 레벨
+    itemRarity = ""         # 레어도(에픽)
+    setItemId = ""
+    setItemName = ""        # 세트 이름
+    reinforce = 0           # 강화 수치
+    amplificationName = ""  # 증폭 여부
+    refine = ""             # 재련 수치
+
+    equipmentImageUrl = ""  # 장비 이미지 url
+
+    def initEqInfo(self, jsonData):
+        self.isequip = True
+        self.slotId = jsonData['slotId']
+        self.slotName = jsonData['slotName']
+        self.itemId = jsonData['itemId']
+        self.itemName = jsonData['itemName']
+        self.itemTypeId = jsonData['itemTypeId']
+        self.itemType = jsonData['itemType']
+        self.itemTypeDetailId = jsonData['itemTypeDetailId']
+        self.itemTypeDetail = jsonData['itemTypeDetail']
+        self.itemAvailableLevel = jsonData['itemAvailableLevel']
+        self.itemRarity = jsonData['itemRarity']
+        self.setItemId = jsonData['setItemId']
+        self.setItemName = jsonData['setItemName']
+        self.reinforce = jsonData['reinforce']
+        self.amplificationName = jsonData['amplificationName']
+        self.refine = jsonData['refine']
+
+
+        self.equipmentImageUrl = "https://"+api_image_server_d+"/df/items/"+self.itemId
+        if "enchant" in jsonData:
+            self.isenchant = True
+            self.enchant = jsonData['enchant']
+
+
+class WEAPON(equipment):       # 무기
+    isFusion = False           # 융합이냐?
+    isAsrahan = False          # 아스라한이냐?
+    def initInfo(self, jsonData): # 이 json 데이터는 무기 정보만 아래 칭호와 방어구도 그에 따른 json 넘겨주기
+        self.initEqInfo(jsonData)
+        self.isFusion = False
+        self.isAsrahan = False
+        if "fusionOption" in jsonData:
+            self.isFusion = True
+            self.FusionOption = jsonData['fusionOption']    # 융합 옵션
+            self.upgradeInfo = jsonData['upgradeInfo']      # 융합 장비 Id 및 이름
+        elif "asrahanOption" in jsonData:
+            self.isAsrahan = True
+
+
+
+class TITLE(equipment):
+    def initInfo(self, jsonData):
+        self.initEqInfo(jsonData)
+        pass
+
+class DEFENSEGEAR(equipment):   # 무기 이외의 장비들
+    isMistGear = False
+    def initInfo(self, jsonData):
+        self.initEqInfo(jsonData)
+        pass
+    
+    
 class PlayerInformation:
-    def initBasicInfo(self, jsonData): # 기본 정보들
+    def __init__(self):     # 저장할 클래스 준비
+        self.m_equipment = [WEAPON(), TITLE()]
+        for _ in range(11):
+            self.m_equipment.append(DEFENSEGEAR())
+        
+    def initBasicInfo(self, jsonData): # 기본 정보들 초기화
         self.playerjson = jsonData
         self.serverId = jsonData['serverId']
         self.characterId = jsonData['characterId']
@@ -36,34 +121,11 @@ class PlayerInformation:
         result = conn.getresponse().read().decode('utf-8')
         jsonData = json.loads(result)
         equimentjson = jsonData['equipment']
-        print(equimentjson)
 
-class equipment:
-    slotId = ""
-    slotName = ""
-    itemId = ""
-    itemName = ""
-    itemTypeId = ""
-    itemType = ""
-    itemTypeDetailedId = ""
-    itemTypeDeatil = ""
-    itemAvailableLevel = 0
-    itemRarity = ""
-    setItemId = ""
-    setItemName = ""
-    reinforce = 0
-    amplificationName = ""
-    refine = ""
+        for i in range(len(self.m_equipment)):      # 장착하지 않음으로 초기화(착용하지 않은 장비는 표기하면 안된다)
+            self.m_equipment[i].isequip = False
 
-    equipmentImageUrl = ""
+        for i in range(len(equimentjson)):
+            self.m_equipment[equipmentEnum[equimentjson[i]['slotId']]].initInfo(equimentjson[i])
+        
 
-    def initEqInfo(self):
-        pass
-
-class WEAPON(equipment):       # 무기
-    def initWeaponInfo(self):
-        pass
-
-class DEFENSEGEAR:
-    def initDEFInfo(self):
-        pass
