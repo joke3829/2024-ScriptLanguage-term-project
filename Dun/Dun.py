@@ -35,6 +35,7 @@ class DUN:
         window = Tk()
         window.title("-던-")
         window.geometry("800x600")
+        window.resizable(False, False)
         notebook = tkinter.ttk.Notebook(window, width= 800, height=600)
         notebook.pack()
         self.frame1 = Frame(window)

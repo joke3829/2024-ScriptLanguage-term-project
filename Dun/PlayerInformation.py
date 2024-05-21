@@ -138,7 +138,6 @@ class PlayerInformation:
             raw_data = u.read()
         im = Image.open(BytesIO(raw_data))
         self.characterImage = ImageTk.PhotoImage(im)
-        self.characterImage
 
         self.smallurl = "https://" + api_image_server_d + "/df/servers/" + self.serverId + "/characters/" + self.characterId + "?zoom=1"
 
