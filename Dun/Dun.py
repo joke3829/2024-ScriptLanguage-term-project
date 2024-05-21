@@ -60,10 +60,15 @@ class DUN:
         #Game_servers['rows'][0]['serverId'] = cain
     def ReadyInterface(self):
         # 1번 노트패드
-        photo = PhotoImage(file="resource/1page.gif")
+        self.backgroundphoto = PhotoImage(file="resource/1page.gif")
+        self.imageCanvas = Canvas(self.frame1, width=800, height=600)
+        self.imageCanvas.place(x=0, y=0)
+        self.imageCanvas.create_image(0, 0, anchor='nw', image=self.backgroundphoto, tags='back')
+        '''
         imageLabel = Label(self.frame1, image=photo)
         imageLabel.image=photo
         imageLabel.pack()
+        '''
         Label(self.frame1, text="서버 선택").place(x=50, y=30)
         self.selected_server = StringVar()
         self.selected_server.set("전체")
@@ -90,8 +95,6 @@ class DUN:
         self.Scrollbar.config(command=self.player_list.yview)
         self.player_list.bind("<<ListboxSelect>>", self.selectListBoxEvent)
         #self.charImage = Label(self.frame1)
-        self.charImage = Canvas(self.frame1)
-        self.charImage.place(x=350,y=100)
 
 
         self.searchButton = Button(self.frame1, text="정보 보기",width=10,height=2, command=self.searchAdvanced)
@@ -137,12 +140,8 @@ class DUN:
                                     self.searchList['rows'][i]['characterName'])
     def selectPlayer(self):
         self.User.initBasicInfo(self.searchList['rows'][self.player_list.curselection()[0]])
-        #self.charImage.destroy()
-        #self.charImage = Label(self.frame1, image=self.User.characterImage, bg='white')
-        #self.charImage.Image = self.User.characterImage
-        #self.charImage.place(x = 350, y = 100)
-        self.charImage.delete('charIm')
-        self.charImage.create_image(0, 0, image=self.User.characterImage, tags='charIm')
+        self.imageCanvas.delete('charIm')
+        self.imageCanvas.create_image(550, 300, image=self.User.characterImage, tags='charIm')
         self.searchButton['state'] = 'active'
         self.searchButton['bg'] = 'white'
 

@@ -13,7 +13,7 @@ service_key_d = "XseeTsrayJvhvwg8IATRWhpPXb2nZ2DP"
 
 equipmentEnum = {"WEAPON": 0, "TITLE": 1, "JACKET" : 2, "SHOULDER": 3, "PANTS": 4
                  , "SHOES": 5, "WAIST": 6, "AMULET": 7, "WRIST": 8, "RING": 9
-                 , "SUPPORT": 10, "MAGIC_STON": 11, "EARRING": 12}
+                 , "SUPPORT": 10, "MAGIC_STON": 11, "EARRING": 12, "SUPPORT_WEAPON": 13}
 
 
 class equipment:        # 장비가 공통적으로 가지는 요소
@@ -118,7 +118,7 @@ class DEFENSEGEAR(equipment):   # 무기 이외의 장비들
 class PlayerInformation:
     def __init__(self):     # 저장할 클래스 준비
         self.m_equipment = [WEAPON(), TITLE()]
-        for _ in range(11):
+        for _ in range(12):
             self.m_equipment.append(DEFENSEGEAR())
         
     def initBasicInfo(self, jsonData): # 기본 정보들 초기화
@@ -134,11 +134,14 @@ class PlayerInformation:
         self.fame = jsonData['fame']
         # 캐릭터 이미지 읽기 및 저장
         url = "https://"+api_image_server_d+"/df/servers/"+self.serverId+"/characters/"+self.characterId+"?zoom=2"
-        print(url)
         with urllib.request.urlopen(url) as u:
             raw_data = u.read()
         im = Image.open(BytesIO(raw_data))
         self.characterImage = ImageTk.PhotoImage(im)
+        self.characterImage
+
+        self.smallurl = "https://" + api_image_server_d + "/df/servers/" + self.serverId + "/characters/" + self.characterId + "?zoom=1"
+
 
     def initAdvancedInfo(self):
         #장비 정보 받기
