@@ -89,7 +89,10 @@ class DUN:
         self.player_list.config(yscrollcommand=self.Scrollbar.set)
         self.Scrollbar.config(command=self.player_list.yview)
         self.player_list.bind("<<ListboxSelect>>", self.selectListBoxEvent)
-        self.charImage = Label(self.frame1)
+        #self.charImage = Label(self.frame1)
+        self.charImage = Canvas(self.frame1)
+        self.charImage.place(x=350,y=100)
+
 
         self.searchButton = Button(self.frame1, text="정보 보기",width=10,height=2, command=self.searchAdvanced)
         self.searchButton['state'] = 'disabled'
@@ -134,10 +137,12 @@ class DUN:
                                     self.searchList['rows'][i]['characterName'])
     def selectPlayer(self):
         self.User.initBasicInfo(self.searchList['rows'][self.player_list.curselection()[0]])
-        self.charImage.destroy()
-        self.charImage = Label(self.frame1, image=self.User.characterImage, bg='white')
-        self.charImage.Image = self.User.characterImage
-        self.charImage.place(x = 350, y = 100)
+        #self.charImage.destroy()
+        #self.charImage = Label(self.frame1, image=self.User.characterImage, bg='white')
+        #self.charImage.Image = self.User.characterImage
+        #self.charImage.place(x = 350, y = 100)
+        self.charImage.delete('charIm')
+        self.charImage.create_image(0, 0, image=self.User.characterImage, tags='charIm')
         self.searchButton['state'] = 'active'
         self.searchButton['bg'] = 'white'
 
