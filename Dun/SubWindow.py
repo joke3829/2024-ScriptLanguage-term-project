@@ -46,6 +46,17 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         im = im.resize((300, 345))
         self.smallChar = ImageTk.PhotoImage(im, master=self.window)
         self.CharCanvas.create_image(150, -50, anchor='nw', image=self.smallChar, tags='char')
+        # 장비 정보창
+        infoframe = Frame(self.CharCanvas, width=450, height=490, bg="white")
+        infoframe.place(x = 75, y=267)
+        self.infoCanvas = Canvas(infoframe, width=445, height=490, bg="white")
+        self.infoCanvas.pack(side=LEFT)
+        infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
+        infoScroll.pack(side=RIGHT, fill=Y)
+        self.infoCanvas.config(yscrollcommand=infoScroll.set)
+        self.infoCanvas.bind('<Configure>', self.update_info)
+
+
 
         #무기 라벨
         if self.User.m_equipment[0].isequip:
@@ -196,10 +207,13 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         pass
     def ReadyTimelinePage(self):
         pass
+    # 캔법스 사이즈 (445x?)
     def showWeaponInfo(self, event):
-        print("무기")
+        self.infoCanvas.delete('equipinfo')
+        self.infoCanvas.create_text(100, 50, text="무기", tags='equipinfo')
     def showTitleInfo(self, event):
-        print("칭호")
+        self.infoCanvas.delete('equipinfo')
+        self.infoCanvas.create_text(100, 50, text="칭호", tags='equipinfo')
     def showJacketInfo(self, event):
         print("상의")
     def showShoulderInfo(self, event):
@@ -223,6 +237,8 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         print("마법석")
     def showEarringInfo(self, event):
         print("귀걸이")
+    def update_info(self, event):
+        self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
     def destroyWindow(self):
         self.CharCanvas.delete('back')
         self.CharCanvas.destroy()

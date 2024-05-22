@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/2024-ScriptLanguage-term-project.iml" filepath="$PROJECT_DIR$/.idea/2024-ScriptLanguage-term-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../스크립트 언어/.idea/스크립트 언어.iml" filepath="$PROJECT_DIR$/../스크립트 언어/.idea/스크립트 언어.iml" />
     </modules>
   </component>
 </project>
