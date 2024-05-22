@@ -73,6 +73,7 @@ class WEAPON(equipment):       # 무기
         self.isAsrahan = False
         self.isCustom = False
         self.engraveName = False
+        self.isFixed = False
         if "fusionOption" in jsonData:
             self.isFusion = True
             self.fusionOption = jsonData['fusionOption']    # 융합 옵션
@@ -103,6 +104,10 @@ class DEFENSEGEAR(equipment):   # 무기 이외의 장비들
     isFusion = False
     def initInfo(self, jsonData):
         self.initEqInfo(jsonData)
+        self.isMistGear = False
+        self.isFixed = False
+        self.isCustom = False
+        self.isFusion = False
         if "fusionOption" in jsonData:
             self.isFusion = True
             self.fusionOption = jsonData['fusionOption']
@@ -153,6 +158,7 @@ class PlayerInformation:
         result = conn.getresponse().read().decode('utf-8')
         jsonData = json.loads(result)
         equimentjson = jsonData['equipment']
+        print(equimentjson)
 
         for i in range(len(self.m_equipment)):      # 장착하지 않음으로 초기화(착용하지 않은 장비는 표기하면 안된다)
             self.m_equipment[i].isequip = False

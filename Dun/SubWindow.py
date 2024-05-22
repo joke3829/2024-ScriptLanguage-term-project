@@ -57,12 +57,9 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         infoframe.place(x = 75, y=267)
         self.infoCanvas = Canvas(infoframe, width=445, height=485, bg="gray10")
         self.infoCanvas.pack(side=LEFT)
-        infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
-        infoScroll.pack(side=RIGHT, fill=Y)
-        infoxScroll = Scrollbar(infoframe, command=self.infoCanvas.xview,orient=HORIZONTAL)
-        infoxScroll.pack(after=self.infoCanvas, fill=X)
-        self.infoCanvas.config(yscrollcommand=infoScroll.set, xscrollcommand=infoxScroll)
-        self.infoCanvas.bind('<Configure>', self.update_info)
+        self.infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
+        self.infoScroll.pack(side=RIGHT, fill=Y)
+        self.infoCanvas.config(yscrollcommand=self.infoScroll.set)
 
 
 
@@ -215,7 +212,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         pass
     def ReadyTimelinePage(self):
         pass
-    # 캔법스 사이즈 (445x?), 줄 간격은 22
+    # 캔법스 사이즈 (445x?), 줄 간격은 22 만약 문장이 22글자가 넘어가면 열바꿈 추가
     def showWeaponInfo(self, event):
         self.infoCanvas.delete('equipinfo')
         fcolor = RarityColor[self.User.m_equipment[0].itemRarity]
@@ -224,11 +221,12 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             reinforcestr += "+" +str(self.User.m_equipment[0].reinforce)
         if self.User.m_equipment[0].refine != 0:
             reinforcestr += "("+str(self.User.m_equipment[0].refine)+")"
-
+        if reinforcestr != "":
+            reinforcestr += " "
         if self.User.m_equipment[0].engraveName and self.User.m_equipment[0].isAsrahan:
-            self.infoCanvas.create_text(0, 20, text=reinforcestr +" " +self.User.characterName + " : 안개의 기억을 깨운 자", tags='equipinfo', fill=fcolor, font=self.Tempfont, anchor='nw')
+            self.infoCanvas.create_text(0, 20, text=reinforcestr +self.User.characterName + " : 안개의 기억을 깨운 자", tags='equipinfo', fill=fcolor, font=self.Tempfont, anchor='nw')
         else:
-            self.infoCanvas.create_text(0, 20, text=reinforcestr + " " +self.User.m_equipment[0].itemName, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='nw')
+            self.infoCanvas.create_text(0, 20, text=reinforcestr +self.User.m_equipment[0].itemName, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='nw')
         self.infoCanvas.create_text(445,20, text=self.User.m_equipment[0].itemRarity, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='ne')
         self.infoCanvas.create_text(445,42, text=self.User.m_equipment[0].itemType, font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='ne')
         self.infoCanvas.create_text(0, 42, text="레벨제한 "+str(self.User.m_equipment[0].itemAvailableLevel), font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
@@ -241,8 +239,100 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             self.infoCanvas.create_text(445, line, text="단계: " + str(Uinfo.asrahanOption['options'][0]['step']), font=self.Tempfont,
                                         fill='deep sky blue', tags='equipinfo', anchor='ne')
             line += 22
-            self.infoCanvas.create_text(0, line, text="스킬 범위 옵션 수치의 총합이 23% 이상일 때 모든 TP 스킬 Lv +1", font=self.Tempfont,
-                                        fill='deep sky blue', tags='equipinfo', anchor='nw')
+            s = Uinfo.asrahanOption['options'][0]['explain']
+            s = self.stringCut(s)
+            ncnt = s.count('\n')
+            self.infoCanvas.create_text(0, line, text=s,
+                                        font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
+            line += 22*ncnt
+            self.infoCanvas.create_text(0, line, text=Uinfo.asrahanOption['options'][1]['name'],
+                                        font=self.Tempfont, fill="deep sky blue", tags='equipinfo', anchor='nw')
+            self.infoCanvas.create_text(445, line, text="단계: " + str(Uinfo.asrahanOption['options'][1]['step']),
+                                        font=self.Tempfont, fill="deep sky blue", tags='equipinfo', anchor='ne')
+            line += 22
+            self.infoCanvas.create_text(0, line, text=Uinfo.asrahanOption['options'][1]['explain'],
+                                        font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
+            line += 44
+
+        if Uinfo.isCustom:
+            self.infoCanvas.create_text(0, line, text="커스텀 옵션",
+                                        font=self.Tempfont, fill=RarityColor['레전더리'], tags='equipinfo', anchor='nw')
+            line += 22
+            for i in range(len(Uinfo.customOption['options'])):
+                self.infoCanvas.create_text(0, line, text="옵션 "+str(i+1),
+                                            font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+                line += 22
+                s = Uinfo.customOption['options'][i]['explain']
+                s = self.stringCut(s)
+                ncnt = s.count('\n')
+                self.infoCanvas.create_text(0, line, text=s,
+                                            font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                if ncnt != 0:
+                    line += 22*ncnt
+                line += 22
+            line += 44
+        if Uinfo.isFixed:
+            self.infoCanvas.create_text(0, line, text="고정 옵션",
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            s = Uinfo.fixedOption['explain']
+            s = self.stringCut(s)
+            ncnt = s.count('\n')
+            self.infoCanvas.create_text(0, line, text=s,
+                                        font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+            if ncnt != 0:
+                line += 22 * ncnt
+            line += 22
+        if Uinfo.isenchant:
+            self.infoCanvas.create_text(0, line, text="마법 부여",
+                                        font=self.Tempfont, fill=RarityColor['유니크'], tags='equipinfo', anchor='nw')
+            line += 22
+            if "explain" in Uinfo.enchant:
+                s = Uinfo.enchant['explain']
+                s = self.stringCut(s)
+                ncnt = s.count('\n')
+                self.infoCanvas.create_text(0, line, text=s,
+                                            font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                if ncnt != 0:
+                    line += 22 * ncnt
+                line += 22
+            if "status" in Uinfo.enchant:
+                for i in range(len(Uinfo.enchant['status'])):
+                    self.infoCanvas.create_text(0, line, text=Uinfo.enchant['status'][i]['name'] + " +" + str(Uinfo.enchant['status'][i]['value']),
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo',
+                                                anchor='nw')
+                    line += 22
+            line += 22
+        if Uinfo.isFusion:
+            self.infoCanvas.create_text(0, line, text="융합석",
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            self.infoCanvas.create_text(0, line, text=Uinfo.upgradeInfo['itemName'],
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            for i in range(len(Uinfo.fusionOption['options'])):
+                if "explain" in Uinfo.fusionOption['options'][i]:
+                    s = Uinfo.fusionOption['options'][i]['explain']
+                    s = self.stringCut(s)
+                    ncnt = s.count('\n')
+                    self.infoCanvas.create_text(0, line, text=s,
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                    if ncnt != 0:
+                        line += 22 * ncnt
+                elif "damage" in Uinfo.fusionOption['options'][i]:
+                    self.infoCanvas.create_text(0, line, text="공격력 증가 +" + str(Uinfo.fusionOption['options'][i]['damage']),
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo',
+                                                anchor='nw')
+                line += 22
+            line += 22
+        if Uinfo.amplificationName != None:
+            self.infoCanvas.create_text(0, line, text="증폭 - " + Uinfo.amplificationName,
+                                        font=self.Tempfont, fill=RarityColor['유니크'], tags='equipinfo', anchor='nw')
+            line += 22
+
+        self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
+
+
     def showTitleInfo(self, event):
         self.infoCanvas.delete('equipinfo')
         fcolor = RarityColor[self.User.m_equipment[1].itemRarity]
@@ -255,6 +345,29 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         self.infoCanvas.create_text(0, 42, text="레벨제한 " + str(self.User.m_equipment[1].itemAvailableLevel),
                                     font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
         line = 86
+        Uinfo = self.User.m_equipment[1]
+        if Uinfo.isenchant:
+            self.infoCanvas.create_text(0, line, text="마법 부여",
+                                        font=self.Tempfont, fill=RarityColor['유니크'], tags='equipinfo', anchor='nw')
+            line += 22
+            if "explain" in Uinfo.enchant:
+                s = Uinfo.enchant['explain']
+                s = self.stringCut(s)
+                ncnt = s.count('\n')
+                self.infoCanvas.create_text(0, line, text=s,
+                                            font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                if ncnt != 0:
+                    line += 22 * ncnt
+                line += 22
+            if "status" in Uinfo.enchant:
+                for i in range(len(Uinfo.enchant['status'])):
+                    self.infoCanvas.create_text(0, line, text=Uinfo.enchant['status'][i]['name'] + " +" + str(
+                        Uinfo.enchant['status'][i]['value']),
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo',
+                                                anchor='nw')
+                    line += 22
+            line += 22
+        self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
     def showDInfo(self, x, event):
         self.infoCanvas.delete('equipinfo')
         fcolor = RarityColor[self.User.m_equipment[x].itemRarity]
@@ -263,7 +376,9 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             reinforcestr += "+" + str(self.User.m_equipment[x].reinforce)
         if self.User.m_equipment[x].refine != 0:
             reinforcestr += "(" + str(self.User.m_equipment[x].refine) + ")"
-        self.infoCanvas.create_text(0, 20, text=reinforcestr + " " +self.User.m_equipment[x].itemName, font=self.Tempfont, fill=fcolor,
+        if reinforcestr != "":
+            reinforcestr += " "
+        self.infoCanvas.create_text(0, 20, text=reinforcestr +self.User.m_equipment[x].itemName, font=self.Tempfont, fill=fcolor,
                                     tags='equipinfo', anchor='nw')
         self.infoCanvas.create_text(445, 20, text=self.User.m_equipment[x].itemRarity, font=self.Tempfont, fill=fcolor,
                                     tags='equipinfo', anchor='ne')
@@ -285,8 +400,101 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         self.infoCanvas.create_text(0, 42, text="레벨제한 " + str(self.User.m_equipment[x].itemAvailableLevel),
                                     font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
         line=86
-    def update_info(self, event):
+        Uinfo = self.User.m_equipment[x]
+        if Uinfo.isMistGear:
+            self.infoCanvas.create_text(445, 64, text="미스트 기어",
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='ne')
+        if Uinfo.isCustom:
+            self.infoCanvas.create_text(0, line, text="커스텀 옵션",
+                                        font=self.Tempfont, fill=RarityColor['레전더리'], tags='equipinfo', anchor='nw')
+            line += 22
+            for i in range(len(Uinfo.customOption['options'])):
+                self.infoCanvas.create_text(0, line, text="옵션 " + str(i + 1),
+                                            font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+                line += 22
+                s = Uinfo.customOption['options'][i]['explain']
+                s = self.stringCut(s)
+                ncnt = s.count('\n')
+                self.infoCanvas.create_text(0, line, text=s,
+                                            font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                if ncnt != 0:
+                    line += 22 * ncnt
+                line += 22
+            line += 44
+        if Uinfo.isFixed:
+            self.infoCanvas.create_text(0, line, text="고정 옵션",
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            s = Uinfo.fixedOption['explain']
+            s = self.stringCut(s)
+            ncnt = s.count('\n')
+            self.infoCanvas.create_text(0, line, text=s,
+                                        font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+            if ncnt != 0:
+                line += 22 * ncnt
+            line += 22
+        if Uinfo.isenchant:
+            self.infoCanvas.create_text(0, line, text="마법 부여",
+                                        font=self.Tempfont, fill=RarityColor['유니크'], tags='equipinfo', anchor='nw')
+            line += 22
+            if "explain" in Uinfo.enchant:
+                s = Uinfo.enchant['explain']
+                s = self.stringCut(s)
+                ncnt = s.count('\n')
+                self.infoCanvas.create_text(0, line, text=s,
+                                            font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                if ncnt != 0:
+                    line += 22 * ncnt
+                line += 22
+            if "status" in Uinfo.enchant:
+                for i in range(len(Uinfo.enchant['status'])):
+                    self.infoCanvas.create_text(0, line, text=Uinfo.enchant['status'][i]['name'] + " +" + str(
+                        Uinfo.enchant['status'][i]['value']),
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo',
+                                                anchor='nw')
+                    line += 22
+            line += 22
+        if Uinfo.isFusion:
+            self.infoCanvas.create_text(0, line, text="융합석",
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            self.infoCanvas.create_text(0, line, text=Uinfo.upgradeInfo['itemName'],
+                                        font=self.Tempfont, fill=RarityColor['에픽'], tags='equipinfo', anchor='nw')
+            line += 22
+            for i in range(len(Uinfo.fusionOption['options'])):
+                if "explain" in Uinfo.fusionOption['options'][i]:
+                    s = Uinfo.fusionOption['options'][i]['explain']
+                    s = self.stringCut(s)
+                    ncnt = s.count('\n')
+                    self.infoCanvas.create_text(0, line, text=s,
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo', anchor='nw')
+                    if ncnt != 0:
+                        line += 22 * ncnt
+                elif "damage" in Uinfo.fusionOption['options'][i]:
+                    self.infoCanvas.create_text(0, line, text="공격력 증가 +" + str(Uinfo.fusionOption['options'][i]['damage']),
+                                                font=self.Tempfont, fill=RarityColor['커먼'], tags='equipinfo',
+                                                anchor='nw')
+                line += 22
+            line += 22
+        if Uinfo.amplificationName != None:
+            self.infoCanvas.create_text(0, line, text="증폭 - " + Uinfo.amplificationName,
+                                        font=self.Tempfont, fill=RarityColor['유니크'], tags='equipinfo', anchor='nw')
+            line += 22
         self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
+    def stringCut(self, s):
+        i = 0
+        j = 0
+        while i != len(s):
+            if s[i] == '\n':
+                j = 0
+            else:
+                if j >= 30:
+                    s = s[:i] + '\n' + s[i:]
+                    j = 0
+                else:
+                    j += 1
+            i += 1
+        return s
     def destroyWindow(self):
         self.CharCanvas.delete('back')
         self.CharCanvas.destroy()
