@@ -32,6 +32,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
 
         self.frame3 = Frame(self.window)
         notebook.add(self.frame3, text='타임라인')
+        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
 
         self.ReadyEquipmentPage()
 
@@ -54,11 +55,13 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         # 장비 정보창
         infoframe = Frame(self.CharCanvas, width=450, height=490, bg="white")
         infoframe.place(x = 75, y=267)
-        self.infoCanvas = Canvas(infoframe, width=445, height=490, bg="gray10")
+        self.infoCanvas = Canvas(infoframe, width=445, height=485, bg="gray10")
         self.infoCanvas.pack(side=LEFT)
         infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
         infoScroll.pack(side=RIGHT, fill=Y)
-        self.infoCanvas.config(yscrollcommand=infoScroll.set)
+        infoxScroll = Scrollbar(infoframe, command=self.infoCanvas.xview,orient=HORIZONTAL)
+        infoxScroll.pack(after=self.infoCanvas, fill=X)
+        self.infoCanvas.config(yscrollcommand=infoScroll.set, xscrollcommand=infoxScroll)
         self.infoCanvas.bind('<Configure>', self.update_info)
 
 
@@ -215,47 +218,73 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
     # 캔법스 사이즈 (445x?), 줄 간격은 22
     def showWeaponInfo(self, event):
         self.infoCanvas.delete('equipinfo')
-        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
         fcolor = RarityColor[self.User.m_equipment[0].itemRarity]
+        reinforcestr = ""
+        if self.User.m_equipment[0].reinforce != 0:
+            reinforcestr += "+" +str(self.User.m_equipment[0].reinforce)
+        if self.User.m_equipment[0].refine != 0:
+            reinforcestr += "("+str(self.User.m_equipment[0].refine)+")"
+
         if self.User.m_equipment[0].engraveName and self.User.m_equipment[0].isAsrahan:
-            self.infoCanvas.create_text(10, 20, text=self.User.characterName + " : 안개의 기억을 깨운 자", tags='equipinfo', fill=fcolor, font=self.Tempfont, anchor='nw')
+            self.infoCanvas.create_text(0, 20, text=reinforcestr +" " +self.User.characterName + " : 안개의 기억을 깨운 자", tags='equipinfo', fill=fcolor, font=self.Tempfont, anchor='nw')
         else:
-            self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[0].itemName, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='nw')
-        self.infoCanvas.create_text(445,42, text=self.User.m_equipment[0].itemRarity, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='ne')
-        self.infoCanvas.create_text(445,64, text=self.User.m_equipment[0].itemType, font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='ne')
+            self.infoCanvas.create_text(0, 20, text=reinforcestr + " " +self.User.m_equipment[0].itemName, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='nw')
+        self.infoCanvas.create_text(445,20, text=self.User.m_equipment[0].itemRarity, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(445,42, text=self.User.m_equipment[0].itemType, font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(0, 42, text="레벨제한 "+str(self.User.m_equipment[0].itemAvailableLevel), font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
+        self.infoCanvas.create_text(445, 64, text=self.User.m_equipment[0].itemTypeDetail, font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='ne')
+        line = 108
+        Uinfo = self.User.m_equipment[0]
+        # 따질건 4개 isAsrahan, isCustom, isFixed, isFusion 아스라한이면 고정과 퓨전은 없다
+        if Uinfo.isAsrahan:
+            self.infoCanvas.create_text(0, line, text=Uinfo.asrahanOption['options'][0]['name'], font=self.Tempfont,fill='deep sky blue', tags='equipinfo', anchor='nw')
+            self.infoCanvas.create_text(445, line, text="단계: " + str(Uinfo.asrahanOption['options'][0]['step']), font=self.Tempfont,
+                                        fill='deep sky blue', tags='equipinfo', anchor='ne')
+            line += 22
+            self.infoCanvas.create_text(0, line, text="스킬 범위 옵션 수치의 총합이 23% 이상일 때 모든 TP 스킬 Lv +1", font=self.Tempfont,
+                                        fill='deep sky blue', tags='equipinfo', anchor='nw')
     def showTitleInfo(self, event):
         self.infoCanvas.delete('equipinfo')
-        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
         fcolor = RarityColor[self.User.m_equipment[1].itemRarity]
-        self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[1].itemName, font=self.Tempfont, fill=fcolor,
+        self.infoCanvas.create_text(0, 20, text=self.User.m_equipment[1].itemName, font=self.Tempfont, fill=fcolor,
                                         tags='equipinfo', anchor='nw')
-        self.infoCanvas.create_text(445, 42, text=self.User.m_equipment[1].itemRarity, font=self.Tempfont, fill=fcolor,
+        self.infoCanvas.create_text(445, 20, text=self.User.m_equipment[1].itemRarity, font=self.Tempfont, fill=fcolor,
                                     tags='equipinfo', anchor='ne')
-        self.infoCanvas.create_text(445, 64, text='칭호', font=self.Tempfont, fill="#FFFFFF",
+        self.infoCanvas.create_text(445, 42, text='칭호', font=self.Tempfont, fill="#FFFFFF",
                                     tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(0, 42, text="레벨제한 " + str(self.User.m_equipment[1].itemAvailableLevel),
+                                    font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
+        line = 86
     def showDInfo(self, x, event):
         self.infoCanvas.delete('equipinfo')
-        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
         fcolor = RarityColor[self.User.m_equipment[x].itemRarity]
-        self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[x].itemName, font=self.Tempfont, fill=fcolor,
+        reinforcestr = ""
+        if self.User.m_equipment[x].reinforce != 0:
+            reinforcestr += "+" + str(self.User.m_equipment[x].reinforce)
+        if self.User.m_equipment[x].refine != 0:
+            reinforcestr += "(" + str(self.User.m_equipment[x].refine) + ")"
+        self.infoCanvas.create_text(0, 20, text=reinforcestr + " " +self.User.m_equipment[x].itemName, font=self.Tempfont, fill=fcolor,
                                     tags='equipinfo', anchor='nw')
-        self.infoCanvas.create_text(445, 42, text=self.User.m_equipment[x].itemRarity, font=self.Tempfont, fill=fcolor,
+        self.infoCanvas.create_text(445, 20, text=self.User.m_equipment[x].itemRarity, font=self.Tempfont, fill=fcolor,
                                     tags='equipinfo', anchor='ne')
         if x == 10:
-            self.infoCanvas.create_text(445, 64, text='보조장비', font=self.Tempfont,
+            self.infoCanvas.create_text(445, 42, text='보조장비', font=self.Tempfont,
                                         fill="#FFFFFF",
                                         tags='equipinfo', anchor='ne')
         elif x == 11:
-            self.infoCanvas.create_text(445, 64, text='마법석', font=self.Tempfont,
+            self.infoCanvas.create_text(445, 42, text='마법석', font=self.Tempfont,
                                         fill="#FFFFFF",
                                         tags='equipinfo', anchor='ne')
         elif x == 12:
-            self.infoCanvas.create_text(445, 64, text='귀걸이', font=self.Tempfont,
+            self.infoCanvas.create_text(445, 42, text='귀걸이', font=self.Tempfont,
                                         fill="#FFFFFF",
                                         tags='equipinfo', anchor='ne')
         else:
-            self.infoCanvas.create_text(445, 64, text=self.User.m_equipment[x].itemType, font=self.Tempfont, fill="#FFFFFF",
+            self.infoCanvas.create_text(445, 42, text=self.User.m_equipment[x].itemType, font=self.Tempfont, fill="#FFFFFF",
                                     tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(0, 42, text="레벨제한 " + str(self.User.m_equipment[x].itemAvailableLevel),
+                                    font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='nw')
+        line=86
     def update_info(self, event):
         self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
     def destroyWindow(self):
