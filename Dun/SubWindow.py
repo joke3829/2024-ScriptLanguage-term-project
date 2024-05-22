@@ -1,12 +1,17 @@
 from tkinter import *
 import tkinter.ttk
+from tkinter import font
 from io import BytesIO
 from PIL import Image, ImageTk
 from PlayerInformation import *
 
+RarityColor = {"커먼": "#FFFFFF", "언커먼":"#68D5ED", "레어": "#B36BFF", "유니크":"#FF00FF", "에픽":"#FFB400",
+               "레전더리":"#FF7800", "태초":"spring green", "신화":"hot pink", "크로니클":"indian red"}
+
 class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 가지는 PlayerInformation 클래스를 기지고 있다
     User = PlayerInformation()
     isCreated = False
+    Tempfont = None
     def initUserInfo(self, info):
         self.User = info
     def createWindow(self):
@@ -49,7 +54,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         # 장비 정보창
         infoframe = Frame(self.CharCanvas, width=450, height=490, bg="white")
         infoframe.place(x = 75, y=267)
-        self.infoCanvas = Canvas(infoframe, width=445, height=490, bg="white")
+        self.infoCanvas = Canvas(infoframe, width=445, height=490, bg="gray10")
         self.infoCanvas.pack(side=LEFT)
         infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
         infoScroll.pack(side=RIGHT, fill=Y)
@@ -89,7 +94,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.JacketImage = ImageTk.PhotoImage(im, master=self.window)
             self.JacketLabel = Label(self.frame1, image=self.JacketImage)
-            self.JacketLabel.bind("<Button-1>", self.showJacketInfo)
+            self.JacketLabel.bind("<Button-1>", lambda event,x = 2: self.showDInfo(x,event))
             self.JacketLabel.place(x= 130, y=42)
         # 어깨 라벨
         if self.User.m_equipment[3].isequip:
@@ -100,7 +105,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.ShoulderImage = ImageTk.PhotoImage(im, master=self.window)
             self.ShoulderLabel = Label(self.frame1, image=self.ShoulderImage)
-            self.ShoulderLabel.bind("<Button-1>", self.showShoulderInfo)
+            self.ShoulderLabel.bind("<Button-1>", lambda event,x = 3: self.showDInfo(x,event))
             self.ShoulderLabel.place(x= 75, y=42)
         # 하의
         if self.User.m_equipment[4].isequip:
@@ -111,7 +116,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.PantsImage = ImageTk.PhotoImage(im, master=self.window)
             self.PantsLabel = Label(self.frame1, image=self.PantsImage)
-            self.PantsLabel.bind("<Button-1>", self.showPantsInfo)
+            self.PantsLabel.bind("<Button-1>", lambda event,x = 4: self.showDInfo(x,event))
             self.PantsLabel.place(x= 75, y=97)
         # 신발
         if self.User.m_equipment[5].isequip:
@@ -122,7 +127,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.ShoesImage = ImageTk.PhotoImage(im, master=self.window)
             self.ShoesLabel = Label(self.frame1, image=self.ShoesImage)
-            self.ShoesLabel.bind("<Button-1>", self.showShoesInfo)
+            self.ShoesLabel.bind("<Button-1>", lambda event,x = 5: self.showDInfo(x,event))
             self.ShoesLabel.place(x= 75, y=152)
         # 벨트
         if self.User.m_equipment[6].isequip:
@@ -133,7 +138,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.WaistImage = ImageTk.PhotoImage(im, master=self.window)
             self.WaistLabel = Label(self.frame1, image=self.WaistImage)
-            self.WaistLabel.bind("<Button-1>", self.showWaistInfo)
+            self.WaistLabel.bind("<Button-1>", lambda event,x = 6: self.showDInfo(x,event))
             self.WaistLabel.place(x= 130, y=97)
         # 목걸이
         if self.User.m_equipment[7].isequip:
@@ -144,7 +149,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.AmuletImage = ImageTk.PhotoImage(im, master=self.window)
             self.AmuletLabel = Label(self.frame1, image=self.AmuletImage)
-            self.AmuletLabel.bind("<Button-1>", self.showAmuletInfo)
+            self.AmuletLabel.bind("<Button-1>", lambda event,x = 7: self.showDInfo(x,event))
             self.AmuletLabel.place(x= 475, y=97)
         # 팔찌
         if self.User.m_equipment[8].isequip:
@@ -155,7 +160,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.WristImage = ImageTk.PhotoImage(im, master=self.window)
             self.WristLabel = Label(self.frame1, image=self.WristImage)
-            self.WristLabel.bind("<Button-1>", self.showWristInfo)
+            self.WristLabel.bind("<Button-1>", lambda event,x = 8: self.showDInfo(x,event))
             self.WristLabel.place(x= 420, y=97)
         # 반지
         if self.User.m_equipment[9].isequip:
@@ -166,7 +171,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.RingImage = ImageTk.PhotoImage(im, master=self.window)
             self.RingLabel = Label(self.frame1, image=self.RingImage)
-            self.RingLabel.bind("<Button-1>", self.showRingInfo)
+            self.RingLabel.bind("<Button-1>", lambda event,x = 9: self.showDInfo(x,event))
             self.RingLabel.place(x= 475, y=152)
         # 보조장비
         if self.User.m_equipment[10].isequip:
@@ -177,7 +182,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.SupportImage = ImageTk.PhotoImage(im, master=self.window)
             self.SupportLabel = Label(self.frame1, image=self.SupportImage)
-            self.SupportLabel.bind("<Button-1>", self.showSupportInfo)
+            self.SupportLabel.bind("<Button-1>", lambda event,x = 10: self.showDInfo(x,event))
             self.SupportLabel.place(x= 420, y=152)
         # 마법석
         if self.User.m_equipment[11].isequip:
@@ -188,7 +193,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.MagicSImage = ImageTk.PhotoImage(im, master=self.window)
             self.MagicSLabel = Label(self.frame1, image=self.MagicSImage)
-            self.MagicSLabel.bind("<Button-1>", self.showMagicSInfo)
+            self.MagicSLabel.bind("<Button-1>", lambda event,x = 11: self.showDInfo(x,event))
             self.MagicSLabel.place(x= 475, y=207)
         # 귀걸이
         if self.User.m_equipment[12].isequip:
@@ -199,7 +204,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             im = im.resize((50, 50))
             self.EarringImage = ImageTk.PhotoImage(im, master=self.window)
             self.EarringLabel = Label(self.frame1, image=self.EarringImage)
-            self.EarringLabel.bind("<Button-1>", self.showEarringInfo)
+            self.EarringLabel.bind("<Button-1>", lambda event,x = 12: self.showDInfo(x,event))
             self.EarringLabel.place(x= 420, y=207)
         # 보조 무기(시간 남으면)
 
@@ -207,36 +212,50 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         pass
     def ReadyTimelinePage(self):
         pass
-    # 캔법스 사이즈 (445x?)
+    # 캔법스 사이즈 (445x?), 줄 간격은 22
     def showWeaponInfo(self, event):
         self.infoCanvas.delete('equipinfo')
-        self.infoCanvas.create_text(100, 50, text="무기", tags='equipinfo')
+        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
+        fcolor = RarityColor[self.User.m_equipment[0].itemRarity]
+        if self.User.m_equipment[0].engraveName and self.User.m_equipment[0].isAsrahan:
+            self.infoCanvas.create_text(10, 20, text=self.User.characterName + " : 안개의 기억을 깨운 자", tags='equipinfo', fill=fcolor, font=self.Tempfont, anchor='nw')
+        else:
+            self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[0].itemName, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='nw')
+        self.infoCanvas.create_text(445,42, text=self.User.m_equipment[0].itemRarity, font=self.Tempfont, fill=fcolor, tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(445,64, text=self.User.m_equipment[0].itemType, font=self.Tempfont, fill="#FFFFFF", tags='equipinfo', anchor='ne')
     def showTitleInfo(self, event):
         self.infoCanvas.delete('equipinfo')
-        self.infoCanvas.create_text(100, 50, text="칭호", tags='equipinfo')
-    def showJacketInfo(self, event):
-        print("상의")
-    def showShoulderInfo(self, event):
-        print("어깨")
-    def showPantsInfo(self, event):
-        print("하의")
-    def showShoesInfo(self, event):
-        print("신발")
-    def showWaistInfo(self, event):
-        print("벨트")
-    def showAmuletInfo(self, event):
-        print("목걸이")
-    def showWristInfo(self, event):
-        print("팔찌")
-
-    def showRingInfo(self, event):
-        print("반지")
-    def showSupportInfo(self, event):
-        print("보조장비")
-    def showMagicSInfo(self, event):
-        print("마법석")
-    def showEarringInfo(self, event):
-        print("귀걸이")
+        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
+        fcolor = RarityColor[self.User.m_equipment[1].itemRarity]
+        self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[1].itemName, font=self.Tempfont, fill=fcolor,
+                                        tags='equipinfo', anchor='nw')
+        self.infoCanvas.create_text(445, 42, text=self.User.m_equipment[1].itemRarity, font=self.Tempfont, fill=fcolor,
+                                    tags='equipinfo', anchor='ne')
+        self.infoCanvas.create_text(445, 64, text='칭호', font=self.Tempfont, fill="#FFFFFF",
+                                    tags='equipinfo', anchor='ne')
+    def showDInfo(self, x, event):
+        self.infoCanvas.delete('equipinfo')
+        self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
+        fcolor = RarityColor[self.User.m_equipment[x].itemRarity]
+        self.infoCanvas.create_text(10, 20, text=self.User.m_equipment[x].itemName, font=self.Tempfont, fill=fcolor,
+                                    tags='equipinfo', anchor='nw')
+        self.infoCanvas.create_text(445, 42, text=self.User.m_equipment[x].itemRarity, font=self.Tempfont, fill=fcolor,
+                                    tags='equipinfo', anchor='ne')
+        if x == 10:
+            self.infoCanvas.create_text(445, 64, text='보조장비', font=self.Tempfont,
+                                        fill="#FFFFFF",
+                                        tags='equipinfo', anchor='ne')
+        elif x == 11:
+            self.infoCanvas.create_text(445, 64, text='마법석', font=self.Tempfont,
+                                        fill="#FFFFFF",
+                                        tags='equipinfo', anchor='ne')
+        elif x == 12:
+            self.infoCanvas.create_text(445, 64, text='귀걸이', font=self.Tempfont,
+                                        fill="#FFFFFF",
+                                        tags='equipinfo', anchor='ne')
+        else:
+            self.infoCanvas.create_text(445, 64, text=self.User.m_equipment[x].itemType, font=self.Tempfont, fill="#FFFFFF",
+                                    tags='equipinfo', anchor='ne')
     def update_info(self, event):
         self.infoCanvas.configure(scrollregion=self.infoCanvas.bbox('all'))
     def destroyWindow(self):

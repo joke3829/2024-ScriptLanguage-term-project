@@ -66,11 +66,13 @@ class WEAPON(equipment):       # 무기
     isAsrahan = False          # 아스라한이냐?
     isCustom = False          # 불가침이냐?
     isFixed = False            # 고정픽인가?
+    engraveName = False
     def initInfo(self, jsonData): # 이 json 데이터는 무기 정보만 아래 칭호와 방어구도 그에 따른 json 넘겨주기
         self.initEqInfo(jsonData)
         self.isFusion = False
         self.isAsrahan = False
         self.isCustom = False
+        self.engraveName = False
         if "fusionOption" in jsonData:
             self.isFusion = True
             self.fusionOption = jsonData['fusionOption']    # 융합 옵션
@@ -84,6 +86,8 @@ class WEAPON(equipment):       # 무기
         elif "fixedOption" in jsonData:
             self.isFixed = True
             self.fixedOption = jsonData['fixedOption']
+        if "engraveName" in jsonData:
+            self.engraveName = True
 
 
 
