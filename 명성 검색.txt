@@ -1,0 +1,2007 @@
+{
+  "fame" : {
+    "min" : 65253,
+    "max" : 67253
+  },
+  "rows" : [ {
+    "serverId" : "anton",
+    "characterId" : "150a23219a59e086e36db59028c06a50",
+    "characterName" : "헤롱카테",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 67253
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "a8fde495dfe7109b23492faa4da0c53b",
+    "characterName" : "븜다닥",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 67203
+  }, {
+    "serverId" : "cain",
+    "characterId" : "9b675e44d8ecbe2b7d5ac8b79e50206a",
+    "characterName" : "우타마루",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 67177
+  }, {
+    "serverId" : "cain",
+    "characterId" : "51a0333bfb01853bbe3b7536a8b90748",
+    "characterName" : "꿈처럼연주함",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 67173
+  }, {
+    "serverId" : "cain",
+    "characterId" : "91051fdfe2371f6a60afee9bec8c26bd",
+    "characterName" : "NT-1",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 67073
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "b736d335e6c02bb0aea1a339c7c3fd6a",
+    "characterName" : "김유니",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 67073
+  }, {
+    "serverId" : "cain",
+    "characterId" : "5e7eaf266dae15f2eb7ca301c0fa269e",
+    "characterName" : "Last아담",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 67027
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "0daa8c49cae531262f966dd637008e30",
+    "characterName" : "민트크림소스",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 소환사",
+    "fame" : 67027
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "026c586858dfdad89f06396c332157f2",
+    "characterName" : "찰리.",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66968
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "d5425b2fc531bfced7e73d7fd540cd24",
+    "characterName" : "담배핌..",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66963
+  }, {
+    "serverId" : "anton",
+    "characterId" : "103e5c925e8a698e89abd4d68cce1d0e",
+    "characterName" : "스팅거타이거",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66942
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "6483d2dd5aab4222e35bf1b45a00a3b9",
+    "characterName" : "영",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 배틀메이지",
+    "fame" : 66911
+  }, {
+    "serverId" : "prey",
+    "characterId" : "3ba38c77f2868f34d910e362d0f4cae1",
+    "characterName" : "프라디지",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 버서커",
+    "fame" : 66906
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "dd1a5ef6180a20fe4610cc2a5e60eaa3",
+    "characterName" : "Malfurion",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66900
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "79a62ecc85e602ae7f13b79b766aa2ee",
+    "characterName" : "금요일야근",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66900
+  }, {
+    "serverId" : "cain",
+    "characterId" : "c68676ab74772b3d7449e3ef9886ed30",
+    "characterName" : "던뉴비세라핌",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66884
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "c0e1c148c937934dd8a4c9b9631eaf1e",
+    "characterName" : "벚꽃",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66879
+  }, {
+    "serverId" : "cain",
+    "characterId" : "45016422d2e3c9c65418fe5f648534c6",
+    "characterName" : "앵콜없는깔개",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66879
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "02535132b35738a1522abe664afb1ff1",
+    "characterName" : "우유",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66879
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "ffc86a10644507dd5ac75e073b7857a1",
+    "characterName" : "이키",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 마도학자",
+    "fame" : 66879
+  }, {
+    "serverId" : "prey",
+    "characterId" : "8c2b3d28a289131a2cf0ba3065a1dc39",
+    "characterName" : "키리마도샤로",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 마도학자",
+    "fame" : 66879
+  }, {
+    "serverId" : "cain",
+    "characterId" : "b56cedc7ca96e3d1ff8061055c4945cc",
+    "characterName" : "빛",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66878
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "99e816abcdbd86c043e944c601a26807",
+    "characterName" : "치엘",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66869
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "fb0fe14684b00eb10a9259c74e96ddbc",
+    "characterName" : "o크림리퍼o",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 섀도우댄서",
+    "fame" : 66862
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "0687f6c88b92b94c49e3b170d70e8c26",
+    "characterName" : "인남님",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66854
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "18a617e20c08a8006ce552d434f972d7",
+    "characterName" : "비트",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66809
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "c13b95710493ec4dd38a2671ac0fc89c",
+    "characterName" : "공급",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66800
+  }, {
+    "serverId" : "cain",
+    "characterId" : "5e25faa5ffeddf3c54f304059da95048",
+    "characterName" : "뮤즚",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66786
+  }, {
+    "serverId" : "cain",
+    "characterId" : "cee578c82f718f4452c4ec90d1ded3a5",
+    "characterName" : "리팸",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66779
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ca1e902c5bf8404332cef33c56cf3c91",
+    "characterName" : "뺌찬",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66779
+  }, {
+    "serverId" : "cain",
+    "characterId" : "4e2a128b945dc3ca7dda0aa158421c52",
+    "characterName" : "진곰인형",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66779
+  }, {
+    "serverId" : "cain",
+    "characterId" : "9e9aecb66127af0a87ca58adf81e1923",
+    "characterName" : "썬붕이",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66776
+  }, {
+    "serverId" : "cain",
+    "characterId" : "763224811a28aea12a8db60e46c3da04",
+    "characterName" : "어라이즈_",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66762
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "9a1b414ba98175972cecaaf0810d931a",
+    "characterName" : "EL군",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 인파이터",
+    "fame" : 66751
+  }, {
+    "serverId" : "cain",
+    "characterId" : "f7abb77ceef126f135feb124138a9361",
+    "characterName" : "쏙",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 트래블러",
+    "fame" : 66742
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "ef4e14538c86e8010bf2b9bb069a671a",
+    "characterName" : "모라고욥",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66739
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "bb1ed2afd1ee1b7478e2f1652246fdef",
+    "characterName" : "*JackFrost*",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 빙결사",
+    "fame" : 66719
+  }, {
+    "serverId" : "prey",
+    "characterId" : "b923e651e38c1285c8292714f95aec1c",
+    "characterName" : "도",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66719
+  }, {
+    "serverId" : "cain",
+    "characterId" : "30b7f5e543beb26bf7af762293df5fe2",
+    "characterName" : "알레프아크",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66712
+  }, {
+    "serverId" : "anton",
+    "characterId" : "49f25fa05b70671c8f57449ccf5b977a",
+    "characterName" : "핌씨",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66709
+  }, {
+    "serverId" : "prey",
+    "characterId" : "d57e48d170ce15c43b7d2e044bd70657",
+    "characterName" : "stram",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66705
+  }, {
+    "serverId" : "cain",
+    "characterId" : "7f8b65c379eaff9e296e24022990bff2",
+    "characterName" : "런처하늘",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66702
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "db132358079a8cdef583b391d7114a83",
+    "characterName" : "청화심",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66695
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "4f4ec1b0c753577c4b9304329ae5e61f",
+    "characterName" : "Harunohi",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 넨마스터",
+    "fame" : 66694
+  }, {
+    "serverId" : "cain",
+    "characterId" : "e270463952c8253766273f4a8ae83cc3",
+    "characterName" : "검협",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66691
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "5de9a83de910e19bb7a8ef1cc4db464c",
+    "characterName" : "성실한일격",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66691
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "602bc63abb99e97503fee0020762d56d",
+    "characterName" : "처키",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈 바머",
+    "fame" : 66691
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "af734a9dd56faef142eefb2af24e50c4",
+    "characterName" : "장야",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66683
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "e9ed53afde968f0542283081336c169d",
+    "characterName" : "WhiteNoble",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66679
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "3afa9ec2317c9b2cd9766f1b5c33b0ff",
+    "characterName" : "던라자캐7",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66679
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "d27e91eed7a0b3727e2555ff449e4017",
+    "characterName" : "체페쉬",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66679
+  }, {
+    "serverId" : "cain",
+    "characterId" : "27f7965a6765b44ee3f0bef83e59a92b",
+    "characterName" : "카냥이",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66679
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "f1669b230dfad0f36a20af583b7186c1",
+    "characterName" : "크난♥",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 그래플러",
+    "fame" : 66679
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "240ec6abdc6729f4ae13ee877534dfde",
+    "characterName" : "카물",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66672
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "adc48abf76103439f11eb2959ebb24a8",
+    "characterName" : "Lonelily",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 쿠노이치",
+    "fame" : 66670
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "346fbd076e9f43bc63206b661acd94b0",
+    "characterName" : "맹독약사",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66668
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ec892da54f597450978ac5f6c4555744",
+    "characterName" : "페델레스",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66665
+  }, {
+    "serverId" : "prey",
+    "characterId" : "cf03bf11b5ba7c16d2dfbd3d5dd82a7e",
+    "characterName" : "CatChu!",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 헌터",
+    "fame" : 66659
+  }, {
+    "serverId" : "cain",
+    "characterId" : "d018e5f7e7519e34b8ef21db0c40fd98",
+    "characterName" : "쑤남",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66659
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "1b4772dfd22c63df061082b9cf2b8c2f",
+    "characterName" : "장애인",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66659
+  }, {
+    "serverId" : "prey",
+    "characterId" : "30457433f85c1170a8ab5bad0af68311",
+    "characterName" : "幸福神ΩGOD",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 스트리트파이터",
+    "fame" : 66659
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "aba504702f9677e4504ce639daef3a82",
+    "characterName" : "제이",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66654
+  }, {
+    "serverId" : "cain",
+    "characterId" : "efb0f16fd6b57e7e8715cbc6fcc724af",
+    "characterName" : "코코로",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66653
+  }, {
+    "serverId" : "prey",
+    "characterId" : "5e3aa505cf8b7f70353db84dc5ca5b95",
+    "characterName" : "솜사탕포도",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66644
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "fa91f4d9088f952669135db8491c9d62",
+    "characterName" : "호노쿠마",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66636
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "185f23bf48d9499aeea1166aef6b2127",
+    "characterName" : "§TryAgain§",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ce6943e1e473e43ecc51cf63d7e3c959",
+    "characterName" : "26세바람돌이",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 스위프트 마스터",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "77dc867cacd5d2bf87b175886928aa3f",
+    "characterName" : "3409",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 배틀메이지",
+    "fame" : 66634
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "d1afc2df697cf859fe15605a70bb89a2",
+    "characterName" : "ludydoolly",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 퇴마사",
+    "fame" : 66634
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "631b76fdb747ef6db850d65b8fc3160a",
+    "characterName" : "ONCE",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 베가본드",
+    "fame" : 66634
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "73c5fa10bc5fff85d8a038b976194c88",
+    "characterName" : "고운말_51068",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 스핏파이어",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "fc3fee1c0e72099357dc35cac28d7f12",
+    "characterName" : "김무녀씨",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 무녀",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1cf6fb24825aa96f61eb65f4fa68ab3d",
+    "characterName" : "무개무개",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66634
+  }, {
+    "serverId" : "prey",
+    "characterId" : "65160f998cf8ced6681b53d9c12fdec5",
+    "characterName" : "무자비",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66634
+  }, {
+    "serverId" : "prey",
+    "characterId" : "9a61eb6f56ddb0bda7de5f7bc7c24965",
+    "characterName" : "방패로막아요",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 팔라딘",
+    "fame" : 66634
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "a9cb76f5d104bd68859f00493d543c63",
+    "characterName" : "별준",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 인파이터",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ede338cd1bae46931eedf82f71bd1999",
+    "characterName" : "잔불",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66634
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "2e5fa69aab087febe215bcb5c4e9dac9",
+    "characterName" : "정보근",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66634
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "e7a83e9e600be325d4f4ff6d1bc1dc29",
+    "characterName" : "주먹캉",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66634
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "e4762f4505c3172dbcbee835464ad4cc",
+    "characterName" : "처녀",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66634
+  }, {
+    "serverId" : "cain",
+    "characterId" : "d821f12065229c2fcb69d43fc155ade0",
+    "characterName" : "팡슝이♬",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 팔라딘",
+    "fame" : 66634
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "957f6c17f50e25e201121f3bb42f317e",
+    "characterName" : "연동",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 버서커",
+    "fame" : 66627
+  }, {
+    "serverId" : "cain",
+    "characterId" : "8a7538f2a54431f3486f3b038df7e58f",
+    "characterName" : "정형규",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66626
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "25d8c2f2900e8b0ff175da3286f64115",
+    "characterName" : "악Ⅹ",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 미스트리스",
+    "fame" : 66624
+  }, {
+    "serverId" : "cain",
+    "characterId" : "241d94017b439c518ab75d0da088067e",
+    "characterName" : "카밀라폭스",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 로그",
+    "fame" : 66624
+  }, {
+    "serverId" : "cain",
+    "characterId" : "f685d494f58b5bb9a2a36bce4386a9d1",
+    "characterName" : "힌쥐",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66624
+  }, {
+    "serverId" : "prey",
+    "characterId" : "f2c2e08684c7bad5cfff67d4e0549fca",
+    "characterName" : "르앙",
+    "level" : 110,
+    "jobId" : "986c2b3d72ee0e4a0b7fcfbe786d4e02",
+    "jobName" : "총검사",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 히트맨",
+    "fame" : 66622
+  }, {
+    "serverId" : "prey",
+    "characterId" : "9b7dca8b23fe3f7a73ff6c07c5f4e098",
+    "characterName" : "제로서포트",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 드래곤나이트",
+    "fame" : 66622
+  }, {
+    "serverId" : "cain",
+    "characterId" : "de7a287b387e3183737820a487a4bad3",
+    "characterName" : "짱예쁨",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66622
+  }, {
+    "serverId" : "cain",
+    "characterId" : "0fa3ea10e23577bf4849937c101c9f2b",
+    "characterName" : "꿈처럼멋지게",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 스트리트파이터",
+    "fame" : 66621
+  }, {
+    "serverId" : "prey",
+    "characterId" : "558f8c51a9d8503f50c86a0c4d94b9c7",
+    "characterName" : "[성화]",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 이단심판관",
+    "fame" : 66619
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "031e5f08d9fd61dd914bbf7ac1379c8d",
+    "characterName" : "뮤네",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66619
+  }, {
+    "serverId" : "prey",
+    "characterId" : "03db5d272359677a847a512215d0f838",
+    "characterName" : "돼송이스커",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66617
+  }, {
+    "serverId" : "cain",
+    "characterId" : "6cfe11424d1a1c836be3e20449b0f6ef",
+    "characterName" : "재야의준",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 그래플러",
+    "fame" : 66616
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "740850aa105d63870cbabdc364110815",
+    "characterName" : "졸업",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66616
+  }, {
+    "serverId" : "anton",
+    "characterId" : "4fda3bf8de00447b1417f4787d940592",
+    "characterName" : "골든마우스",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66614
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "406c899f6e1ab9d722c9133b6604a428",
+    "characterName" : "NÅTs",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66612
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "9f33782351514503704109e6b258e2ec",
+    "characterName" : "로망캔슬",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66612
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "fee5739936716d4484cdbebc2fe6fbc4",
+    "characterName" : "소힐님",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66612
+  }, {
+    "serverId" : "prey",
+    "characterId" : "afe2808b80a28f92ef034c4cdc69e4f3",
+    "characterName" : "박종우",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66611
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1cbbb9f728d8fa8eb115e368f602613f",
+    "characterName" : "「루시페르」",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66602
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "582345194cd22a3545bb2b3cf21ba7a9",
+    "characterName" : "眞쥬피",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66601
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "603f935c21c8fa5a09d0addbddd1f745",
+    "characterName" : "닉넴이읍어",
+    "level" : 110,
+    "jobId" : "3deb7be5f01953ac8b1ecaa1e25e0420",
+    "jobName" : "마창사",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 다크 랜서",
+    "fame" : 66598
+  }, {
+    "serverId" : "prey",
+    "characterId" : "06502d6be8a5fd84c1fda2e0b86f4d5f",
+    "characterName" : "꼬냙",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66597
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "77dc30a3c6a7fbb20be373ce6924ebfa",
+    "characterName" : "설국열차",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 빙결사",
+    "fame" : 66597
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "a8df009bb7a6424a7513b1bfd0cce436",
+    "characterName" : "원지원지원지",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 런처",
+    "fame" : 66597
+  }, {
+    "serverId" : "cain",
+    "characterId" : "5ed46e45b53cf6c0e0b9798878fbbd3b",
+    "characterName" : "줄리앙세르",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66597
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "ef79377b3a008a7804d21c482253bc21",
+    "characterName" : "호노카와이",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66597
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "85004993c06cdc11f13acf06a497229e",
+    "characterName" : "금단의마녀",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66596
+  }, {
+    "serverId" : "cain",
+    "characterId" : "9d36638de2de3ac97c02cd53b9f17f59",
+    "characterName" : "꽁꽁로제",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66596
+  }, {
+    "serverId" : "cain",
+    "characterId" : "9aad5597347ddef1b908fb32e3a4f36e",
+    "characterName" : "라빈슈리즈",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 디멘션워커",
+    "fame" : 66596
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "d6e4300e7bc15075079b2514df1ff013",
+    "characterName" : "리듬타는지니",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66596
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "837b00d98b583e2cea872c3cc3371716",
+    "characterName" : "민설연",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66596
+  }, {
+    "serverId" : "prey",
+    "characterId" : "99cc11a443892f9259a420392dea53ee",
+    "characterName" : "북극수라",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 아수라",
+    "fame" : 66596
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "0778cbd731eeef93a7dc33a588a18eda",
+    "characterName" : "친절배려양보",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66596
+  }, {
+    "serverId" : "cain",
+    "characterId" : "9fa83ce1bb004edf2e6355ff7a90d106",
+    "characterName" : "패천사",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66596
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "b9ca0457022525d948375c53a583c963",
+    "characterName" : "앤",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 소드마스터",
+    "fame" : 66593
+  }, {
+    "serverId" : "cain",
+    "characterId" : "efab192bd245643c3ad7e4db1b589d16",
+    "characterName" : "Cb_NM",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 넨마스터",
+    "fame" : 66592
+  }, {
+    "serverId" : "cain",
+    "characterId" : "a2bad8599abd81fb39af62a0744f8299",
+    "characterName" : "정무감자",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 버서커",
+    "fame" : 66592
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "76a3807349588f032de34bd29495d3a9",
+    "characterName" : "고운말_52051",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66586
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "c6a4235f2f05510df6ae612be2cc50b4",
+    "characterName" : "이나영",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66586
+  }, {
+    "serverId" : "cain",
+    "characterId" : "8cc917c54d984ff52c1e2ca04dc4760f",
+    "characterName" : "미호크와이프",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 베가본드",
+    "fame" : 66585
+  }, {
+    "serverId" : "prey",
+    "characterId" : "7b49e64aeba7ca3ff042d8cb0c741b65",
+    "characterName" : "쿠키",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 베가본드",
+    "fame" : 66583
+  }, {
+    "serverId" : "prey",
+    "characterId" : "c3bc83f8270681488ac16418968ba985",
+    "characterName" : "Another_Ai",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 스트리트파이터",
+    "fame" : 66577
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "1b75e8e7747081e845bbd77c799bd253",
+    "characterName" : "Dukyou",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66577
+  }, {
+    "serverId" : "prey",
+    "characterId" : "59f7a76db632fe8ca6fed84e195f9d59",
+    "characterName" : "Thurd",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66577
+  }, {
+    "serverId" : "prey",
+    "characterId" : "3c9ebbc5a87f981862066faf518e5759",
+    "characterName" : "꽁븜",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 트래블러",
+    "fame" : 66577
+  }, {
+    "serverId" : "cain",
+    "characterId" : "80e2e5fcd56e8e8035c8b053b2d9e98c",
+    "characterName" : "낙타",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 그래플러",
+    "fame" : 66577
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "4c128d3703474e7a07012819eb7c49be",
+    "characterName" : "숭출",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 배틀메이지",
+    "fame" : 66577
+  }, {
+    "serverId" : "cain",
+    "characterId" : "cd3af547704f0f89a8af4805fd1cd398",
+    "characterName" : "알키오네㎓",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 로그",
+    "fame" : 66577
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "5e9d6bc0bfca3e7887c25e824ef163cd",
+    "characterName" : "천랑검마",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 데몬슬레이어",
+    "fame" : 66577
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "8a60dd143368fce23d6911db88085dd3",
+    "characterName" : "패트맨",
+    "level" : 110,
+    "jobId" : "986c2b3d72ee0e4a0b7fcfbe786d4e02",
+    "jobName" : "총검사",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 트러블 슈터",
+    "fame" : 66577
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "97633139e21e323138be9a4e3bb7d9da",
+    "characterName" : "하늘색푸딩",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66577
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "ec62ca279b84fe7ada47626eb6649d6b",
+    "characterName" : "Only_One",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66571
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "f5203a76fc9f9835f5e8999417edcc12",
+    "characterName" : "아스피날",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66571
+  }, {
+    "serverId" : "prey",
+    "characterId" : "90f0504382246b81b0f77d18b383b5e9",
+    "characterName" : "성영",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘븐나이트",
+    "fame" : 66567
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "d9a0c393faf6cec0f610012d0ce698e4",
+    "characterName" : "박개똥",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66563
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "6db41d974fca60cbb4a25ef29130e610",
+    "characterName" : "선생고범준",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 디멘션워커",
+    "fame" : 66563
+  }, {
+    "serverId" : "prey",
+    "characterId" : "018a9414236e1b52820b4f6cd2c7c2c3",
+    "characterName" : "청염",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 소울브링어",
+    "fame" : 66563
+  }, {
+    "serverId" : "cain",
+    "characterId" : "d52035e67809c198a8b9e4deb5f7fe7c",
+    "characterName" : "Archmage",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66560
+  }, {
+    "serverId" : "cain",
+    "characterId" : "612b29d369039b7b9f81d616dbf5ad7f",
+    "characterName" : "4분.",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66559
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "ce571d60ec762de6ede622ca2423f6dd",
+    "characterName" : "Lucid-★",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66559
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "cff3d3dea3518af7b50d694198f27df9",
+    "characterName" : "나세아스미",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘레멘탈마스터",
+    "fame" : 66559
+  }, {
+    "serverId" : "cain",
+    "characterId" : "747aec5bcb49e70a7322f4f0251e40d3",
+    "characterName" : "위트",
+    "level" : 110,
+    "jobId" : "a5ccbaf5538981c6ef99b236c0a60b73",
+    "jobName" : "마법사(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 빙결사",
+    "fame" : 66559
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1a49ffe6e9d90c9f730bac26cb9baec4",
+    "characterName" : "무딘창끝",
+    "level" : 110,
+    "jobId" : "3deb7be5f01953ac8b1ecaa1e25e0420",
+    "jobName" : "마창사",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 듀얼리스트",
+    "fame" : 66557
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ca3514fbe8210ea309666570c9925780",
+    "characterName" : "뮤",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 로그",
+    "fame" : 66555
+  }, {
+    "serverId" : "cain",
+    "characterId" : "cbfd22019ebdafa19eac74789ea5e1f7",
+    "characterName" : "키큰꼬마아이",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 소환사",
+    "fame" : 66555
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "f246f7cef1bb1bae08a1a5f95a45667d",
+    "characterName" : "현생살러가요",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 스핏파이어",
+    "fame" : 66555
+  }, {
+    "serverId" : "prey",
+    "characterId" : "a9f8d25d018d3709e41bcedc2f888411",
+    "characterName" : "소울스커",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66554
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "ca916943b7e6dc7190a80d3e5bc63451",
+    "characterName" : "신D",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 소드마스터",
+    "fame" : 66554
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "d0286958f1cb9f240ca065eb2c7eb18a",
+    "characterName" : "콘삥슨",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 인파이터",
+    "fame" : 66554
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "ee7482e08ec8cb3a2b491e31883f32cd",
+    "characterName" : "Pass집사",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 비질란테",
+    "fame" : 66553
+  }, {
+    "serverId" : "anton",
+    "characterId" : "9c6e0d396efb68c0ebae4f5dd995d488",
+    "characterName" : "깊숨2",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 블레이드",
+    "fame" : 66553
+  }, {
+    "serverId" : "cain",
+    "characterId" : "7bfd4474cd443538bdd5feede3c567a2",
+    "characterName" : "아이돌븜성민",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66552
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "252ed8aaefaa5f4e6d7060f99aab5416",
+    "characterName" : "집착순애",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66552
+  }, {
+    "serverId" : "prey",
+    "characterId" : "c93f091bdb588d036113574ca022313a",
+    "characterName" : "AkaKnight.",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘븐나이트",
+    "fame" : 66549
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "3607ff20a78bf0cfceb230174ce44cf4",
+    "characterName" : "레인저두식",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66549
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ed76091a018bab5c6eefc414d59c8098",
+    "characterName" : "방가워애두라",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 어썰트",
+    "fame" : 66549
+  }, {
+    "serverId" : "cain",
+    "characterId" : "ed2947a430b06b11aeb301dc296c0278",
+    "characterName" : "염황김종욱",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 넨마스터",
+    "fame" : 66549
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "cdcc1b1c23ada7effafffa246fb171bf",
+    "characterName" : "헌랑",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 데몬슬레이어",
+    "fame" : 66549
+  }, {
+    "serverId" : "cain",
+    "characterId" : "58c7b891428717ec042ea7246129fcfd",
+    "characterName" : "RuKaDoncic",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 소드마스터",
+    "fame" : 66544
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "8799a97922e6564081b5ee52bbe96e9f",
+    "characterName" : "마우스",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66543
+  }, {
+    "serverId" : "prey",
+    "characterId" : "552f9da3b05aabc24106243a7a2b4c7f",
+    "characterName" : "구운동카이저",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66542
+  }, {
+    "serverId" : "casillas",
+    "characterId" : "b4ac40eb2683196ae2c51664a7db2140",
+    "characterName" : "眞:지니.",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 레인저",
+    "fame" : 66540
+  }, {
+    "serverId" : "prey",
+    "characterId" : "1c58ab79f5e34eb9738b42114a8cabce",
+    "characterName" : "각",
+    "level" : 110,
+    "jobId" : "a7a059ebe9e6054c0644b40ef316d6e9",
+    "jobName" : "격투가(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66539
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "361c1f68faf59837f88d49411fb241b7",
+    "characterName" : "우주선",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66539
+  }, {
+    "serverId" : "cain",
+    "characterId" : "4f7c465679553eb948cc95fcf652d82b",
+    "characterName" : "故맨",
+    "level" : 110,
+    "jobId" : "afdf3b989339de478e85b614d274d1ef",
+    "jobName" : "거너(남)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 스핏파이어",
+    "fame" : 66538
+  }, {
+    "serverId" : "hilder",
+    "characterId" : "ddae08188820eeff8a0cb5227d70e177",
+    "characterName" : "레이",
+    "level" : 110,
+    "jobId" : "944b9aab492c15a8474f96947ceeb9e4",
+    "jobName" : "거너(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 스핏파이어",
+    "fame" : 66537
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "01e9dd7643e46dd30bf046030f643a7a",
+    "characterName" : "끈풀홀리",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66536
+  }, {
+    "serverId" : "prey",
+    "characterId" : "8c39b73a24addb20ce411776a3e06d02",
+    "characterName" : "명품븜",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 마도학자",
+    "fame" : 66536
+  }, {
+    "serverId" : "prey",
+    "characterId" : "fc402501adc446279a4c008cd8829344",
+    "characterName" : "밥똥그리고던",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66536
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1d9f7add8b1f593b00bd7cb4db1bdfa9",
+    "characterName" : "동더기",
+    "level" : 110,
+    "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+    "jobName" : "프리스트(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 인파이터",
+    "fame" : 66535
+  }, {
+    "serverId" : "prey",
+    "characterId" : "a56ab19df403134e5c85963d5e39d8b4",
+    "characterName" : "야티루",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66535
+  }, {
+    "serverId" : "cain",
+    "characterId" : "79415a75c331336d986fe192e41a4a6b",
+    "characterName" : "먹고자.",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 다크템플러",
+    "fame" : 66534
+  }, {
+    "serverId" : "cain",
+    "characterId" : "c66986c2ac6f9a66e799d5dd6535245b",
+    "characterName" : "봉훈",
+    "level" : 110,
+    "jobId" : "3deb7be5f01953ac8b1ecaa1e25e0420",
+    "jobName" : "마창사",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뱅가드",
+    "fame" : 66534
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "39feb177fc440b52e97eafbc04c3b5f5",
+    "characterName" : "우포리",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 베가본드",
+    "fame" : 66534
+  }, {
+    "serverId" : "siroco",
+    "characterId" : "47a5bc30178cea2df81179b3c8e39229",
+    "characterName" : "찬우",
+    "level" : 110,
+    "jobId" : "17e417b31686389eebff6d754c3401ea",
+    "jobName" : "다크나이트",
+    "jobGrowId" : "0a49d9c8b5e1358efff324e5cb11d41e",
+    "jobGrowName" : "眞 다크나이트",
+    "fame" : 66534
+  }, {
+    "serverId" : "cain",
+    "characterId" : "a5bdb287cb8b58d9fe885e8f66069835",
+    "characterName" : "모든속성저항",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66533
+  }, {
+    "serverId" : "diregie",
+    "characterId" : "4ffcf1c0ce39814e1c323b7e1699c44d",
+    "characterName" : "룡이찡~♥",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 마도학자",
+    "fame" : 66532
+  }, {
+    "serverId" : "prey",
+    "characterId" : "37d73d4b239e0f2f04f84fd36c947ea5",
+    "characterName" : "앤릴",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66532
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1a8ee7bcfa9a94411a717bb9b2dad7d0",
+    "characterName" : "창조자",
+    "level" : 110,
+    "jobId" : "b522a95d819a5559b775deb9a490e49a",
+    "jobName" : "크리에이터",
+    "jobGrowId" : "0a49d9c8b5e1358efff324e5cb11d41e",
+    "jobGrowName" : "眞 크리에이터",
+    "fame" : 66530
+  }, {
+    "serverId" : "prey",
+    "characterId" : "ee899b8787bd543413dc7171c2254483",
+    "characterName" : "라피즈",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 배틀메이지",
+    "fame" : 66524
+  }, {
+    "serverId" : "cain",
+    "characterId" : "a4455f07250fd31d7a4c540a4199053a",
+    "characterName" : "소녀마법사",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 소환사",
+    "fame" : 66524
+  }, {
+    "serverId" : "cain",
+    "characterId" : "b2fd61e211d802c889231c2d1cccb4c9",
+    "characterName" : "眞:Evil",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "6d459bc74ba73ee4fe5cdc4655400193",
+    "jobGrowName" : "眞 버서커",
+    "fame" : 66522
+  }, {
+    "serverId" : "cain",
+    "characterId" : "77b326ff32a1f2d9e424305bd4f7c775",
+    "characterName" : "흑깽",
+    "level" : 110,
+    "jobId" : "ddc49e9ad1ff72a00b53c6cff5b1e920",
+    "jobName" : "도적",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 섀도우댄서",
+    "fame" : 66521
+  }, {
+    "serverId" : "cain",
+    "characterId" : "52160ea6d7b33b4c6f03fc2a14117266",
+    "characterName" : ".리바이.",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 검귀",
+    "fame" : 66517
+  }, {
+    "serverId" : "prey",
+    "characterId" : "7e7806d90add5d29a0f12ed9c96e5f97",
+    "characterName" : "EvanSeraphim",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66516
+  }, {
+    "serverId" : "prey",
+    "characterId" : "c0b73006c3d7d8a2099d681be50435fc",
+    "characterName" : "류수하",
+    "level" : 110,
+    "jobId" : "ca0f0e0e9e1d55b5f9955b03d9dd213c",
+    "jobName" : "격투가(남)",
+    "jobGrowId" : "618326026de1a1f1cfba5dbd0b8396e7",
+    "jobGrowName" : "眞 스트라이커",
+    "fame" : 66510
+  }, {
+    "serverId" : "cain",
+    "characterId" : "7b1ef93eea69f83344d4107984ae6eff",
+    "characterName" : "컨닝",
+    "level" : 110,
+    "jobId" : "41f1cdc2ff58bb5fdc287be0db2a8df3",
+    "jobName" : "귀검사(남)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 웨펀마스터",
+    "fame" : 66510
+  }, {
+    "serverId" : "cain",
+    "characterId" : "a001cd36445cbe60e93d06263fbaed0c",
+    "characterName" : "내가비선실세",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "c9b492038ee3ca8d27d7004cf58d59f3",
+    "jobGrowName" : "眞 미스트리스",
+    "fame" : 66507
+  }, {
+    "serverId" : "cain",
+    "characterId" : "3b98474d9fc542d9ca227496b308862a",
+    "characterName" : "리싱니",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 소드마스터",
+    "fame" : 66507
+  }, {
+    "serverId" : "prey",
+    "characterId" : "ea5fc6365bbfef0605ae8b0b6763af00",
+    "characterName" : "엄즈",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66506
+  }, {
+    "serverId" : "prey",
+    "characterId" : "71c7e02f19cbd4432df8587351ee70ff",
+    "characterName" : "연쁜",
+    "level" : 110,
+    "jobId" : "0ee8fa5dc525c1a1f23fc6911e921e4a",
+    "jobName" : "나이트",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 엘븐나이트",
+    "fame" : 66497
+  }, {
+    "serverId" : "cain",
+    "characterId" : "912e7c5ac327ff9a878d3fe7a4823ab9",
+    "characterName" : ".미카사.",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 블레이드",
+    "fame" : 66496
+  }, {
+    "serverId" : "cain",
+    "characterId" : "35c5497b19ad71868d0a68dc21c2bc90",
+    "characterName" : "[패밍]",
+    "level" : 110,
+    "jobId" : "1645c45aabb008c98406b3a16447040d",
+    "jobName" : "귀검사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 블레이드",
+    "fame" : 66496
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "8624756c827a81055eb181926cd83b08",
+    "characterName" : "BuffGirls",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66496
+  }, {
+    "serverId" : "cain",
+    "characterId" : "64c0e6b9ba68459d108e7ab1afea175e",
+    "characterName" : "노음표",
+    "level" : 110,
+    "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+    "jobName" : "아처",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 뮤즈",
+    "fame" : 66496
+  }, {
+    "serverId" : "cain",
+    "characterId" : "1bfae28e949ce4c467b03f67ca7e0e29",
+    "characterName" : "뚱땅지투",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66496
+  }, {
+    "serverId" : "bakal",
+    "characterId" : "c9a61f30c0650db794f5a33bb14c914a",
+    "characterName" : "선택과집중",
+    "level" : 110,
+    "jobId" : "3909d0b188e9c95311399f776e331da5",
+    "jobName" : "마법사(여)",
+    "jobGrowId" : "92da05ec93fb43406e193ffb9a2a629b",
+    "jobGrowName" : "眞 인챈트리스",
+    "fame" : 66496
+  }, {
+    "serverId" : "cain",
+    "characterId" : "33f6417d77187b5e239b57fefe5bb808",
+    "characterName" : "힐러김종욱",
+    "level" : 110,
+    "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+    "jobName" : "프리스트(여)",
+    "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+    "jobGrowName" : "眞 크루세이더",
+    "fame" : 66496
+  } ]
+}

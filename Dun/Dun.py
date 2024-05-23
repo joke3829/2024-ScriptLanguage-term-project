@@ -102,6 +102,9 @@ class DUN:
         self.searchButton['state'] = 'disabled'
         self.searchButton['bg'] = 'light gray'
         self.searchButton.place(x=130, y=500)
+        
+        
+        # 2번 노트패드
 
     def searchCharEvent(self, event):
         self.searchChar()
@@ -140,6 +143,9 @@ class DUN:
             self.player_list.insert(i + 1, servername +", 명성:"+str(self.searchList['rows'][i]['fame'])+ ", 이름: "+
                                     self.searchList['rows'][i]['characterName'])
     def selectPlayer(self):
+        tt = self.player_list.curselection()
+        if len(tt) == 0:
+            return
         self.User.initBasicInfo(self.searchList['rows'][self.player_list.curselection()[0]])
         self.imageCanvas.delete('charIm')
         self.imageCanvas.create_image(550, 300, image=self.User.characterImage, tags='charIm')

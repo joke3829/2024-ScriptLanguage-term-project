@@ -4,11 +4,13 @@ from tkinter import font
 from io import BytesIO
 from PIL import Image, ImageTk
 from PlayerInformation import *
+from mailBox import *
 
 RarityColor = {"커먼": "#FFFFFF", "언커먼":"#68D5ED", "레어": "#B36BFF", "유니크":"#FF00FF", "에픽":"#FFB400",
                "레전더리":"#FF7800", "태초":"spring green", "신화":"hot pink", "크로니클":"indian red"}
 
 class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 가지는 PlayerInformation 클래스를 기지고 있다
+    mailbox = mailBox()
     User = PlayerInformation()
     isCreated = False
     Tempfont = None
@@ -62,6 +64,8 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         self.infoScroll = Scrollbar(infoframe, command=self.infoCanvas.yview)
         self.infoScroll.pack(side=RIGHT, fill=Y)
         self.infoCanvas.config(yscrollcommand=self.infoScroll.set)
+
+        Button(self.frame1, text="메일\n전송", command=self.sendmail).place(x=0, y=0)
 
 
 
@@ -245,7 +249,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
                                      fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
         self.sstatCanvas.create_text(0, 142, text=Uinfo[10]['name'] + " - " + str(Uinfo[10]['value']) +"%",
                                      fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
-        self.sstatCanvas.create_text(255, 142, text=Uinfo[11]['name'] + " - " + str(Uinfo[11]['value']) + "%",
+        self.sstatCanvas.create_text(225, 142, text=Uinfo[11]['name'] + " - " + str(Uinfo[11]['value']) + "%",
                                      fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
         self.sstatCanvas.create_text(0, 164, text=Uinfo[12]['name'] + " - " + str(Uinfo[12]['value']),
                                      fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
@@ -687,7 +691,14 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
                     j += 1
             i += 1
         return s
+    def sendmail(self):
+        if self.mailbox.isCreate:
+            self.mailbox.destroyWindow()
+        self.mailbox.initUser(self.User)
+        self.mailbox.createWindow()
     def destroyWindow(self):
+        if self.mailbox.isCreate:
+            self.mailbox.destroyWindow()
         self.frame1.destroy()
         self.frame2.destroy()
         self.frame3.destroy()
