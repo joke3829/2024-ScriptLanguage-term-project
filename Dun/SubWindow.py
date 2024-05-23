@@ -35,6 +35,8 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         self.Tempfont = font.Font(size=12, weight="bold", family="돋움체")
 
         self.ReadyEquipmentPage()
+        self.ReadyStatPage()
+        self.ReadyTimelinePage()
 
         self.window.mainloop()
     def ReadyEquipmentPage(self):
@@ -209,10 +211,200 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         # 보조 무기(시간 남으면)
 
     def ReadyStatPage(self):
-        pass
+        self.StatCanvas = Canvas(self.frame2, width=600, height=800, bg='white')
+        self.StatCanvas.pack()
+        self.StatCanvas.create_image(-556, 0, anchor='nw', image=self.page1_back, tags='back')
+        # 75, 42
+        infoframe = Frame(self.StatCanvas, width=450, height=650, bg="white")
+        infoframe.place(x=75, y=57)
+        self.sstatCanvas = Canvas(infoframe, width=445, height=650, bg="gray10")
+        self.sstatCanvas.pack(side=LEFT)
+        self.sstatScroll = Scrollbar(infoframe, command=self.sstatCanvas.yview)
+        self.sstatScroll.pack(side=RIGHT, fill=Y)
+        self.sstatCanvas.config(yscrollcommand=self.sstatScroll.set)
+
+        self.sstatCanvas.create_text(225, 10, text="!모험단 버프와 길드 능력치는 포함되지 않습니다!", fill=RarityColor['커먼'], font=self.Tempfont)
+        Uinfo = self.User.charStatus
+        self.sstatCanvas.create_text(0, 32, text=Uinfo[0]['name'] +" - "+str(Uinfo[0]['value']), fill=RarityColor['커먼'],
+                                     font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 32, text=Uinfo[1]['name'] + " - " + str(Uinfo[1]['value']), fill=RarityColor['커먼'],
+                                     font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 54, text=Uinfo[2]['name'] + " - " + str(Uinfo[2]['value'])+"%", fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 54, text=Uinfo[3]['name'] + " - " + str(Uinfo[3]['value'])+"%", fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 76, text=Uinfo[4]['name'] + " - " + str(Uinfo[4]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 76, text=Uinfo[5]['name'] + " - " + str(Uinfo[5]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 98, text=Uinfo[6]['name'] + " - " + str(Uinfo[6]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 98, text=Uinfo[7]['name'] + " - " + str(Uinfo[7]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 120, text=Uinfo[8]['name'] + " - " + str(Uinfo[8]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 120, text=Uinfo[9]['name'] + " - " + str(Uinfo[9]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 142, text=Uinfo[10]['name'] + " - " + str(Uinfo[10]['value']) +"%",
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(255, 142, text=Uinfo[11]['name'] + " - " + str(Uinfo[11]['value']) + "%",
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 164, text=Uinfo[12]['name'] + " - " + str(Uinfo[12]['value']),
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 186, text=Uinfo[13]['name'] + " - " + str(Uinfo[13]['value']) + "%",
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(225, 186, text=Uinfo[14]['name'] + " - " + str(Uinfo[14]['value']) + "%",
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 208, text=Uinfo[15]['name'] + " - " + str(Uinfo[15]['value']) + "%",
+                                     fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+        self.sstatCanvas.create_text(0, 252, text="세부 스텟",
+                                     fill='goldenrod', font=self.Tempfont, anchor='nw')
+        line = 274
+        for i in range(16, len(Uinfo)):
+            if Uinfo[i]['value'] != 0:
+                self.sstatCanvas.create_text(0, line, text=Uinfo[i]['name'] + " - " + str(Uinfo[i]['value']),
+                                             fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+                line += 22
+        self.sstatCanvas.configure(scrollregion=self.sstatCanvas.bbox('all'))
     def ReadyTimelinePage(self):
-        pass
-    # 캔법스 사이즈 (445x?), 줄 간격은 22 만약 문장이 22글자가 넘어가면 열바꿈 추가
+        image = Image.open("resource/1-2page.png")
+        self.page1_2_back = ImageTk.PhotoImage(image, master=self.window)
+        self.backCanvas = Canvas(self.frame3, width=600, height=800, bg='white')
+        self.backCanvas.pack()
+        self.backCanvas.create_image(-0, 0, anchor='nw', image=self.page1_2_back, tags='back')
+
+        note = tkinter.ttk.Notebook(self.backCanvas, width=450, height=600)
+        note.place(x=75, y=100)
+
+        equipFrame = Frame(self.backCanvas, width=450, height=600, bg='white')
+        note.add(equipFrame, text='장비 획득')
+
+        RaidFrame = Frame(self.backCanvas, width=450, height=600, bg='green')
+        note.add(RaidFrame, text="레이드, 레기온")
+
+        self.EtimelineCanvas = Canvas(equipFrame, width=430, height=600, bg="gray10")
+        self.EtimelineCanvas.pack(side=LEFT)
+        EtimelineScroll = Scrollbar(equipFrame, command=self.EtimelineCanvas.yview)
+        EtimelineScroll.pack(side=RIGHT, fill=Y)
+        self.EtimelineCanvas.config(yscrollcommand=EtimelineScroll.set)
+
+        self.RtimelineCanvas = Canvas(RaidFrame, width=430, height=600, bg='gray10')
+        self.RtimelineCanvas.pack(side=LEFT)
+        RtimelineScroll = Scrollbar(RaidFrame, command=self.RtimelineCanvas.yview)
+        RtimelineScroll.pack(side=RIGHT, fill=Y)
+        self.RtimelineCanvas.config(yscrollcommand=RtimelineScroll.set)
+
+        self.EtimelineCanvas.create_text(0, 10, text="타임라인 기능은 현재 시간부터 30일 전까지\n최대 100개의 정보를 보여줍니다", fill=RarityColor['유니크'], font=self.Tempfont, anchor='nw')
+        self.RtimelineCanvas.create_text(0, 10, text="타임라인 기능은 현재 시간부터 30일 전까지\n최대 100개의 정보를 보여줍니다",
+                                         fill=RarityColor['유니크'], font=self.Tempfont, anchor='nw')
+        Eline = Rline = 76
+        Uinfo = self.User.ETimeline
+        for i in range(len(Uinfo)):
+            if Uinfo[i]['code'] == 504:
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['date']+ ", " +Uinfo[i]['data']['channelName']+" "+str(Uinfo[i]['data']['channelNo'])+"에서", fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+                Eline += 22
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['data']['itemName'], font=self.Tempfont, fill=RarityColor[Uinfo[i]['data']['itemRarity']], anchor='nw')
+                self.EtimelineCanvas.create_text(430, Eline, text="을/를 획득했습니다.", font=self.Tempfont, fill=RarityColor['커먼'], anchor='ne')
+                Eline += 44
+            elif Uinfo[i]['code'] == 505:
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['date'] + ", " + Uinfo[i]['data'][
+                    'channelName'] + " " + str(Uinfo[i]['data']['channelNo']) + " "+Uinfo[i]['data']['dungeonName']+"에서", fill=RarityColor['커먼'],
+                                                 font=self.Tempfont, anchor='nw')
+                Eline += 22
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['data']['itemName'], font=self.Tempfont,
+                                                 fill=RarityColor[Uinfo[i]['data']['itemRarity']], anchor='nw')
+                self.EtimelineCanvas.create_text(430, Eline, text="을/를 획득했습니다.", font=self.Tempfont,
+                                                 fill=RarityColor['커먼'], anchor='ne')
+                Eline += 44
+            elif Uinfo[i]['code'] == 507:
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['date'] + ", 레이드 카드 보상으로", fill=RarityColor['커먼'],
+                                                 font=self.Tempfont, anchor='nw')
+                Eline += 22
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['data']['itemName'], font=self.Tempfont,
+                                                 fill=RarityColor[Uinfo[i]['data']['itemRarity']], anchor='nw')
+                self.EtimelineCanvas.create_text(430, Eline, text="을/를 획득했습니다.", font=self.Tempfont,
+                                                 fill=RarityColor['커먼'], anchor='ne')
+                Eline += 44
+            elif Uinfo[i]['code'] == 513:
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['date'] + ", "+Uinfo[i]['data']['dungeonName']+"에서", fill=RarityColor['커먼'],
+                                                 font=self.Tempfont, anchor='nw')
+                Eline += 22
+                self.EtimelineCanvas.create_text(0, Eline, text=Uinfo[i]['data']['itemName'], font=self.Tempfont,
+                                                 fill=RarityColor[Uinfo[i]['data']['itemRarity']], anchor='nw')
+                self.EtimelineCanvas.create_text(430, Eline, text="을/를 획득했습니다.", font=self.Tempfont,
+                                                 fill=RarityColor['커먼'], anchor='ne')
+                Eline += 44
+
+        self.EtimelineCanvas.config(scrollregion=self.EtimelineCanvas.bbox('all'))
+        Uinfo = self.User.RTimeline
+        for i in range(len(Uinfo)):
+            if Uinfo[i]['code'] == 201:
+                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['date'], fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+                Rline += 22
+                self.RtimelineCanvas.create_text(0,Rline,text=Uinfo[i]['data']['raidPartyName']+"공격대에서",fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+                Rline += 22
+                if Uinfo[i]['data']['raidName'] == "프레이-이시스":
+                    self.RtimelineCanvas.create_text(0, Rline, text="프레이-이시스를 격추했습니다.", fill='maroon', font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['raidName'] == "무형의 시로코":
+                    self.RtimelineCanvas.create_text(0, Rline, text="무형의 시로코를 처치했습니다.", fill='DarkOrchid1',
+                                                     font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['raidName'] == "혼돈의 오즈마":
+                    self.RtimelineCanvas.create_text(0, Rline, text="오즈마를 소멸시켰습니다.", fill='dark orchid',
+                                                     font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['raidName'] == "기계 혁명":
+                    if Uinfo[i]['data']['modeName'] == "바칼 레이드":
+                        if "hard" in Uinfo[i]['data']:
+                            self.RtimelineCanvas.create_text(0, Rline, text="바칼로부터 천계를 해방시켰습니다.(하드)", fill='firebrick1',
+                                                             font=self.Tempfont, anchor='nw')
+                        else:
+                            self.RtimelineCanvas.create_text(0, Rline, text="바칼로부터 천계를 해방시켰습니다.", fill='firebrick1',
+                                                             font=self.Tempfont, anchor='nw')
+                    else:
+                        self.RtimelineCanvas.create_text(0, Rline, text="세마리의 용을 처치했습니다.", fill='firebrick1',
+                                                         font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['raidName'] == "아스라한":
+                    if Uinfo[i]['data']['modeName'] == "안개의 신, 무":
+                        self.RtimelineCanvas.create_text(0, Rline, text="로페즈를 저지하고 안개신을 구원했습니다.", fill='cornflower blue',
+                                                         font=self.Tempfont, anchor='nw')
+                    else:
+                        if "hard" in Uinfo[i]['data']:
+                            self.RtimelineCanvas.create_text(0, Rline, text="무의 장막 조사를 마쳤습니다(하드).",
+                                                             fill='cornflower blue',
+                                                             font=self.Tempfont, anchor='nw')
+                        else:
+                            self.RtimelineCanvas.create_text(0, Rline, text="무의 장막 조사를 마쳤습니다.",
+                                                             fill='cornflower blue',
+                                                             font=self.Tempfont, anchor='nw')
+            elif Uinfo[i]['code'] == 210:
+                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['date'], fill=RarityColor['커먼'],
+                                                 font=self.Tempfont, anchor='nw')
+                Rline += 22
+                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['data']['raidPartyName'] + "공격대에서",
+                                                 fill=RarityColor['커먼'], font=self.Tempfont, anchor='nw')
+                Rline += 22
+                self.RtimelineCanvas.create_text(0, Rline, text="무너진 이면경계에서 로페즈를 저지하고", fill=RarityColor['레전더리'], font=self.Tempfont, anchor='nw')
+                Rline += 22
+                self.RtimelineCanvas.create_text(0, Rline, text="무의식의 근원지에서 안개신을 구원했습니다.", fill=RarityColor['레전더리'], font=self.Tempfont, anchor='nw')
+            elif Uinfo[i]['code'] == 209:
+                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['date'] + ", "+ self.User.characterName +"가", fill=RarityColor['커먼'],
+                                                 font=self.Tempfont, anchor='nw')
+                Rline += 22
+                if Uinfo[i]['data']['regionName'] == "이스핀즈":
+                    self.RtimelineCanvas.create_text(0, Rline, text="4용인에게서 이스핀즈를 되찾았습니다.", fill='forest green',
+                                                     font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['regionName'] == "차원회랑":
+                    self.RtimelineCanvas.create_text(0, Rline, text="차원회랑에서 기록을 열람했습니다.", fill='DarkGoldenrod2',
+                                                     font=self.Tempfont, anchor='nw')
+                elif Uinfo[i]['data']['regionName'] == '어둑섬':
+                    self.RtimelineCanvas.create_text(0, Rline, text="어둑섬에서 라르고를 격퇴했습니다.", fill='medium orchid',
+                                                     font=self.Tempfont, anchor='nw')
+
+
+            Rline += 44
+
+        self.RtimelineCanvas.config(scrollregion=self.RtimelineCanvas.bbox('all'))
+
+
+
+    # 캔버스 사이즈 (445x?), 줄 간격은 22 만약 문장이 30글자가 넘어가면 열바꿈 추가
     def showWeaponInfo(self, event):
         self.infoCanvas.delete('equipinfo')
         fcolor = RarityColor[self.User.m_equipment[0].itemRarity]
@@ -496,9 +688,6 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
             i += 1
         return s
     def destroyWindow(self):
-        self.CharCanvas.delete('back')
-        self.CharCanvas.destroy()
-
         self.frame1.destroy()
         self.frame2.destroy()
         self.frame3.destroy()

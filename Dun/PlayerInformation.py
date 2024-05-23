@@ -125,6 +125,9 @@ class DEFENSEGEAR(equipment):   # 무기 이외의 장비들
     
     
 class PlayerInformation:
+    charStatus = None
+    ETimeline = None
+    RTimeline = None
     def __init__(self):     # 저장할 클래스 준비
         self.m_equipment = [WEAPON(), TITLE()]
         for _ in range(12):
@@ -153,17 +156,36 @@ class PlayerInformation:
 
     def initAdvancedInfo(self):
         #장비 정보 받기
+        self.charStatus = None
+        self.ETimeline = None
+        self.RTimeline = None
         conn = http.client.HTTPSConnection(api_server_d)
         conn.request("GET", "/df/servers/"+self.serverId+"/characters/"+self.characterId+"/equip/equipment?apikey="+service_key_d)
         result = conn.getresponse().read().decode('utf-8')
         jsonData = json.loads(result)
         equimentjson = jsonData['equipment']
-        print(equimentjson)
 
         for i in range(len(self.m_equipment)):      # 장착하지 않음으로 초기화(착용하지 않은 장비는 표기하면 안된다)
             self.m_equipment[i].isequip = False
 
         for i in range(len(equimentjson)):
             self.m_equipment[equipmentEnum[equimentjson[i]['slotId']]].initInfo(equimentjson[i])
-        
+        conn = http.client.HTTPSConnection(api_server_d)
+        conn.request("GET", "/df/servers/"+self.serverId+"/characters/"+self.characterId+"/status?apikey="+service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)
+        self.charStatus = jsonData['status']
+        conn = http.client.HTTPSConnection(api_server_d)
+        # 장비 타임라인 받기
+        conn.request("GET", "/df/servers/"+self.serverId+"/characters/"+self.characterId+"/timeline?limit=100&code=504,505,507,513&startDate=&endDate=&next=&apikey="+service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)
+        self.ETimeline = jsonData['timeline']['rows']
+        conn.request("GET",
+                     "/df/servers/" + self.serverId + "/characters/" + self.characterId + "/timeline?limit=100&code=201,209,210&startDate=&endDate=&next=&apikey=" + service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)
+        self.RTimeline = jsonData['timeline']['rows']
+
+
 
