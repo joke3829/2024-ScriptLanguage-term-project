@@ -388,7 +388,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
                 Rline += 22
                 self.RtimelineCanvas.create_text(0, Rline, text="무의식의 근원지에서 안개신을 구원했습니다.", fill=RarityColor['레전더리'], font=self.Tempfont, anchor='nw')
             elif Uinfo[i]['code'] == 209:
-                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['date'] + ", "+ self.User.characterName +"가", fill=RarityColor['커먼'],
+                self.RtimelineCanvas.create_text(0, Rline, text=Uinfo[i]['date'] + ", "+ self.User.characterName +"(이)가", fill=RarityColor['커먼'],
                                                  font=self.Tempfont, anchor='nw')
                 Rline += 22
                 if Uinfo[i]['data']['regionName'] == "이스핀즈":
