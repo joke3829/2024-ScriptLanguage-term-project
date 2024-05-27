@@ -1,0 +1,49 @@
+{"SIGUN_CD":"41480",
+"SIGUN_NM":"파주시",!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(시군 이름), 
+"BIZPLC_NM":"케이탑PC방",
+"LICENSG_DE":"20150717",	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(인허가 일자)
+"LICENSG_CANCL_DE":null,
+"BSN_STATE_NM":"운영중",????????????????(리스트 추가할때만 쓰자)
+"CLSBIZ_DE":null,
+"BSN_STATE_DIV_CD":null,
+"BULDNG_PURPOS_NM":null,
+"PERFORM_PLC_FORM_DIV_NM":null,
+"EXISTNG_OTFGMBIZ_INDUTYPE_NM":null,
+"LOCPLC_FACLT_TELNO":null,
+"CULTUR_BIZMAN_DIV_NM":"유통관련업",
+"LOCPLC_AR_INFO":null,
+"CULTUR_PHSTRN_INDUTYPE_NM":"인터넷컴퓨터게임시설제공업"
+"EMGNEXIT_YN":null,
+"FIREFACLT_YN":null,
+"ROADNM_ZIP_CD":null,
+"FACLT_AR":154.71,"AOTO_VENTLTN_YN":null,
+"PROVSN_GAMESW_NM":null,
+"REGION_DIV_NM":null,
+"TOT_GAMEMCHN_CNT":51,
+"FIRST_REGIST_PNT_TM":null,
+"PASSWAY_BRTH":null,
+"PRODLST_NM":null,
+"BIZCOND_DIV_NM_INFO":null,
+"X_CRDNT_VL":null,
+"Y_CRDNT_VL":null,
+"REFINE_LOTNO_ADDR":"경기도 파주시 탄현면 법흥리1591번지",!!!!!!!!(지번 주소)
+"TOT_FLOOR_CNT":null,
+"REFINE_ROADNM_ADDR":"경기도 파주시 탄현면여치길78", !!!!!!!!!!!!!!!!(도로명)
+"CIRCUMFR_ENVRN_NM":null,
+"MANUFACT_TRTMNT_PRODLST_CONT":null,
+"REFINE_ZIP_CD":"10861",	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(우편번호)
+"REFINE_WGS84_LOGT":"126.7024211956", !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(WGS84경도)
+"REFINE_WGS84_LAT":"37.7700000687",!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(WGS84위도)
+"GROUND_FLOOR_CNT":null,
+"UGRWTR_FLOOR_CNT":null,
+"LIGHT_FACLT_ILUM_QTY":null,
+"SNGRUM_RL_CNT":null,
+"YONGROOM_CNT":null,
+"EMGNCY_STAIRS_YN":null,
+"YONGROOM_YN":null,
+"SPECL_LIGHT_YN":null,
+"SONDFACLT_YN":null,
+"VIDEO_REGENRT_NM":null,
+"LIGHT_FACLT_EXTNO":null,
+"SOUND_FACLT_YN":null,
+"CONVNCE_FACLT_YN":null}

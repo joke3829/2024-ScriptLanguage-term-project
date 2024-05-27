@@ -34,7 +34,7 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
 
         self.frame3 = Frame(self.window)
         notebook.add(self.frame3, text='타임라인')
-        self.Tempfont = font.Font(size=8, weight='bold', family='돋움')
+        self.Tempfont = font.Font(size=8, family='돋움', weight='bold')
 
         self.ReadyEquipmentPage()
         self.ReadyStatPage()

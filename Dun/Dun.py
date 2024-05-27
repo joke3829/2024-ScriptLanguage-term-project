@@ -11,11 +11,16 @@ from PIL import Image,ImageTk
 
 from PlayerInformation import *
 from SubWindow import *
+import PCroom
 
 #던전앤파이터용 데이터
 api_server_d = "api.neople.co.kr"
 api_image_server_d = "img-api.neople.co.kr"
 service_key_d = "XseeTsrayJvhvwg8IATRWhpPXb2nZ2DP"
+
+#경기도 pc방
+api_server_pc = "openapi.gg.go.kr"
+service_key_pc = "6a89a2e6edcd400a9bc460e5db75df65"
 
 #던전앤파이터 검색용 요소들
 serverId = ""
@@ -31,6 +36,7 @@ limit = ""
 class DUN:
     User = PlayerInformation()
     InfomationWindow = CharacterInformation()
+    PCroomList = []
     def __init__(self):
         window = Tk()
         window.title("-던-")
@@ -65,11 +71,7 @@ class DUN:
         self.imageCanvas = Canvas(self.frame1, width=800, height=600)
         self.imageCanvas.place(x=0, y=0)
         self.imageCanvas.create_image(0, 0, anchor='nw', image=self.backgroundphoto, tags='back')
-        '''
-        imageLabel = Label(self.frame1, image=photo)
-        imageLabel.image=photo
-        imageLabel.pack()
-        '''
+
         Label(self.frame1, text="서버 선택").place(x=50, y=30)
         self.selected_server = StringVar()
         self.selected_server.set("전체")
@@ -118,6 +120,35 @@ class DUN:
         Button(self.frame2, text='검색', command=self.printGraph).place(x=535, y=75)
         self.graphCanvas = Canvas(self.frame2, width= 700, height=400, bg='gray79')
         self.graphCanvas.place(x=50, y=110)
+
+        # 3번 노트패드
+        conn = http.client.HTTPSConnection(api_server_pc)
+        conn.request("GET", "/GameSoftwaresFacilityProvis?KEY=" + service_key_pc+"&Type=json&pIndex=&pSize")
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)['GameSoftwaresFacilityProvis'][1]['row']
+        t_list.clear()
+        for data in jsonData:
+            if not data["SIGUN_NM"] in t_list:
+                t_list.append(data["SIGUN_NM"])
+        self.selected_SIGUN = StringVar()
+        self.selected_SIGUN.set('파주시')
+        SIGUN_NM = urllib.parse.quote('파주시')
+        conn.request("GET", "/GameSoftwaresFacilityProvis?KEY=" + service_key_pc + "&Type=json&pIndex=&pSize&SIGUN_NM="+SIGUN_NM)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)['GameSoftwaresFacilityProvis'][1]['row']
+        self.PCCombo = tkinter.ttk.Combobox(self.frame3, textvariable=self.selected_SIGUN, values=t_list)
+        self.PCCombo.place(x=140, y=80)
+        self.PCCombo.bind("<<ComboboxSelected>>", self.loadPC)
+        lframe = Frame(self.frame3, width=40, height=10)
+        lframe.place(x=450,y=10)
+        self.PCListbox = Listbox(lframe, width=35, height=10)
+        self.PCListbox.pack(side=LEFT)
+        self.PCScroll = Scrollbar(lframe)
+        self.PCScroll.pack(side=RIGHT, fill=Y)
+        self.PCListbox.config(yscrollcommand=self.PCScroll.set)
+        self.PCScroll.config(command=self.PCListbox.yview)
+        self.PCListbox.bind("<<ListboxSelect>>", self.selectPCList)
+
 
     def searchCharEvent(self, event):
         self.searchChar()
@@ -171,7 +202,7 @@ class DUN:
             self.InfomationWindow.destroyWindow()
         self.InfomationWindow.initUserInfo(self.User)
         self.InfomationWindow.createWindow()
-    def printGraphEvent(self):
+    def printGraphEvent(self, event):
         self.printGraph()
     def printGraph(self):
         if self.fameEntry.get() != '' and not self.fameEntry.get().isdigit():
@@ -192,7 +223,28 @@ class DUN:
         conn.request("GET", "/df/servers/"+serverId+"/characters-fame?minFame=&maxFame="+maxFame+"&jobId=&jobGrowId=&isAllJobGrow=&isBuff=&limit=200&apikey="+service_key_d)
         result = conn.getresponse().read().decode('utf-8')
         jsonData = json.loads(result)
-        print(jsonData)
-
-
+        fameDict = {"귀검사(남)":0, "귀검사(여)":0, "격투가(남)":0, "격투가(여)":0, "거너(남)":0,"거너(여)":0,
+                    "마법사(남)":0,"마법사(여)":0,"프리스트(남)":0,"프리스트(여)":0,"도적":0,"나이트":0,"마창사":0,
+                    "총검사":0,"아처":0,"다크나이트":0,"크리에이터":0}
+        for data in jsonData['rows']:
+            fameDict[data['jobName']] += 1
+        self.graphCanvas.delete('graph')
+        all_values = fameDict.values()
+        max_job_cnt = max(all_values)
+        bar_width = 20
+        x_gap = 20
+        x0 = 20
+        y0 = 250
+        icnt = 0
+        for key, value in fameDict.items():
+            x1 = x0 + icnt*(bar_width + x_gap)
+            y1 = y0 - 200 * value / max_job_cnt
+            self.graphCanvas.create_rectangle(x1, y1, x1+bar_width, y0, fill="red", tags='graph')
+            self.graphCanvas.create_text(x1 + bar_width / 2, y0 + 100, text=key, anchor='n', angle=90, tags='graph')
+            self.graphCanvas.create_text(x1 + bar_width / 2, y1 - 10, text=str(value), anchor='s', tags='graph')
+            icnt += 1
+    def loadPC(self, event):
+        pass
+    def selectPCList(self,event):
+        pass
 DUN()
