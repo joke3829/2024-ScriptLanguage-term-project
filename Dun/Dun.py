@@ -105,6 +105,19 @@ class DUN:
         
         
         # 2번 노트패드
+        self.page2 = PhotoImage(file="resource/2page.png")
+        Label(self.frame2, image=self.page2).place(x=0,y=0)
+        Label(self.frame2,text='서버 선택').place(x=180, y=60)
+        Label(self.frame2, text='명성 입력').place(x=350, y=60)
+        Label(self.frame2, text='집계 범위는 입력 명성-2000까지며 미입력시 게임 내 가장 높은\n명성으로 입력명성이 결정됩니다(최고명성 초과입력 시 동일).').place(x=450, y=10)
+        Label(self.frame2, text='(최대 200명의 플레이어 집계, 최소 55000이상 검색)').place(x=450, y=42)
+        tkinter.ttk.Combobox(self.frame2, textvariable=self.selected_server, values=t_list).place(x=180, y=80)
+        self.fameEntry = Entry(self.frame2, width=25,)
+        self.fameEntry.place(x = 350, y=80)
+        self.fameEntry.bind('<Return>', self.printGraphEvent)
+        Button(self.frame2, text='검색', command=self.printGraph).place(x=535, y=75)
+        self.graphCanvas = Canvas(self.frame2, width= 700, height=400, bg='gray79')
+        self.graphCanvas.place(x=50, y=110)
 
     def searchCharEvent(self, event):
         self.searchChar()
@@ -158,10 +171,28 @@ class DUN:
             self.InfomationWindow.destroyWindow()
         self.InfomationWindow.initUserInfo(self.User)
         self.InfomationWindow.createWindow()
-
-
-
-
+    def printGraphEvent(self):
+        self.printGraph()
+    def printGraph(self):
+        if self.fameEntry.get() != '' and not self.fameEntry.get().isdigit():
+            tkinter.messagebox.showerror('오류', '명성(숫자)를 입력해주세요!')
+            return
+        elif self.fameEntry.get() != '' and eval(self.fameEntry.get()) < 55000:
+            tkinter.messagebox.showerror('오류', '최소 55000 이상을 입력하세요!')
+            return
+        if self.selected_server.get() == "전체":
+            serverId = 'all'
+        else:
+            for i in range(len(self.Game_servers['rows'])):
+                if self.selected_server.get() == self.Game_servers['rows'][i]['serverName']:
+                    serverId = self.Game_servers['rows'][i]['serverId']
+                    break
+        maxFame = self.fameEntry.get()
+        conn = http.client.HTTPSConnection(api_server_d)
+        conn.request("GET", "/df/servers/"+serverId+"/characters-fame?minFame=&maxFame="+maxFame+"&jobId=&jobGrowId=&isAllJobGrow=&isBuff=&limit=200&apikey="+service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)
+        print(jsonData)
 
 
 DUN()
