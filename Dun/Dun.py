@@ -244,7 +244,15 @@ class DUN:
             self.graphCanvas.create_text(x1 + bar_width / 2, y1 - 10, text=str(value), anchor='s', tags='graph')
             icnt += 1
     def loadPC(self, event):
-        pass
+        self.PCroomList.clear()
+        SIGUN_NM = urllib.parse.quote(self.selected_SIGUN.get())
+        conn = http.client.HTTPSConnection(api_server_pc)
+        conn.request("GET", "/GameSoftwaresFacilityProvis?KEY=" + service_key_pc + "&Type=json&pIndex=&pSize&SIGUN_NM="+SIGUN_NM)
+        result = conn.getresponse().read().decode('utf-8')
+        jsonData = json.loads(result)['GameSoftwaresFacilityProvis'][1]['row']
+        for data in jsonData:
+            if data["BSN_STATE_NM"] == '운영중':
+                newPC = PCroom(data['SIGUN_CD'], data['SIGUN_NM'], data['BIZPIC_NM'], data['LICENSG_DE'],)
     def selectPCList(self,event):
         pass
 DUN()
