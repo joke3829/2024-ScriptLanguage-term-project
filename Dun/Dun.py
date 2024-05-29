@@ -8,10 +8,11 @@ import urllib.request
 import urllib.parse
 import json
 from PIL import Image,ImageTk
+from tkintermapview import TkinterMapView
 
 from PlayerInformation import *
 from SubWindow import *
-import PCroom
+from PCroom import PCInfo
 
 #던전앤파이터용 데이터
 api_server_d = "api.neople.co.kr"
@@ -149,6 +150,10 @@ class DUN:
         self.PCScroll.config(command=self.PCListbox.yview)
         self.PCListbox.bind("<<ListboxSelect>>", self.selectPCList)
 
+        self.map_widget = TkinterMapView(self.frame3, width=500, height=380, corner_radius=0)
+        self.map_widget.pack(side=BOTTOM, anchor='se')
+        self.search_marker = self.map_widget.set_position(37.7700000687, 126.7024211956, marker=True)
+        self.search_marker.set_text("케이탑PC방")
 
     def searchCharEvent(self, event):
         self.searchChar()
@@ -252,7 +257,17 @@ class DUN:
         jsonData = json.loads(result)['GameSoftwaresFacilityProvis'][1]['row']
         for data in jsonData:
             if data["BSN_STATE_NM"] == '운영중':
-                newPC = PCroom(data['SIGUN_CD'], data['SIGUN_NM'], data['BIZPIC_NM'], data['LICENSG_DE'],)
+                newPC = PCInfo(data['SIGUN_CD'], data['SIGUN_NM'], data['BIZPLC_NM'], data['LICENSG_DE'], data['REFINE_LOTNO_ADDR'], data['REFINE_ROADNM_ADDR'], data['REFINE_ZIP_CD'], data['REFINE_WGS84_LAT'], data['REFINE_WGS84_LOGT'])
+                self.PCroomList.append(newPC)
+        self.PCListbox.delete(0, END)
+        for i in range(len(self.PCroomList)):
+            self.PCListbox.insert(i+1, self.PCroomList[i].BIZPLC_NM)
     def selectPCList(self,event):
-        pass
+        tt = self.PCListbox.curselection()
+        if len(tt) == 0:
+            return
+        tt = self.PCListbox.curselection()[0]
+        self.map_widget.delete(self.search_marker)
+        self.search_marker = self.map_widget.set_position(eval(self.PCroomList[tt].WGS_LAT), eval(self.PCroomList[tt].WGS_LOGT), marker=True)
+        self.search_marker.set_text(self.PCroomList[tt].BIZPLC_NM)
 DUN()
