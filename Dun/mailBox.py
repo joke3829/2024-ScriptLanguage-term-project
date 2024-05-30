@@ -23,7 +23,7 @@ class mailBox:
         self.reEntry = Entry(self.window, width=40)
         self.reEntry.place(x=20, y=80)
         Label(self.window, text="앱 비밀번호 입력").place(x=20, y=100)
-        self.PassEntry = Entry(self.window, width=30)
+        self.PassEntry = Entry(self.window, width=30, show="*")
         self.PassEntry.place(x=20,y=120)
 
         Button(self.window, text="메일 발송", command=self.sendmail).place(x= 280, y=150)
