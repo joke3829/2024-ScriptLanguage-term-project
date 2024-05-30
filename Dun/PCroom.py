@@ -4,7 +4,7 @@ class PCInfo:
     def __init__(self, SIGUN_CD, SIGUN_NM, BIZPIC_NM, LICENSG_DE, LONTO, ROADNM, ZIP_CD, LAT, LOGT):
         self.SIGUN_CD = SIGUN_CD        # 시군 코드
         self.SIGUN_NM = SIGUN_NM        # 시군 이름
-        self.BIZPIC_NM = BIZPIC_NM      # 기관 이름
+        self.BIZPLC_NM = BIZPIC_NM      # 기관 이름
         self.LICENSG_DE = LICENSG_DE    # 허가 날짜
         self.LONTO_ADDR = LONTO         # 지번 주소
         self.ROADNM_ADDR = ROADNM       # 도로명 주소
