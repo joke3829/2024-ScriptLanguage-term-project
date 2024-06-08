@@ -5,6 +5,7 @@ from io import BytesIO
 from PIL import Image, ImageTk
 from PlayerInformation import *
 from mailBox import *
+import spam
 
 RarityColor = {"커먼": "#FFFFFF", "언커먼":"#68D5ED", "레어": "#B36BFF", "유니크":"#FF00FF", "에픽":"#FFB400",
                "레전더리":"#FF7800", "태초":"spring green", "신화":"hot pink", "크로니클":"indian red"}
@@ -66,6 +67,8 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
         self.infoCanvas.config(yscrollcommand=self.infoScroll.set)
 
         Button(self.frame1, text="메일\n전송", command=self.sendmail).place(x=0, y=0)
+
+        Button(self.frame1, text='파일\n저장', command=self.saveFile).place(x=0,y=40)
 
 
 
@@ -705,3 +708,13 @@ class CharacterInformation: # 이 클래스는 검색한 캐리터의 정보를 
 
         self.window.destroy()
         self.isCreated = False
+
+    def saveFile(self):
+        templist = list()
+        templist.append("서버: "+ self.User.serverId+", 캐릭터 이름: "+self.User.characterName)
+        templist.append("레벨: "+str(self.User.level) +", 직업: "+self.User.jobName+", 전직: "+self.User.jobGrowName)
+        for equip in self.User.m_equipment:
+            if equip.isequip:
+                templist.append(equip.slotName+" - "+equip.itemName)
+        spam.createFile(templist)
+        tkinter.messagebox.showinfo('성공!', '파일을 저장했습니다!')
