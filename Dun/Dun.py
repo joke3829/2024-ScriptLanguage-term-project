@@ -9,6 +9,7 @@ import urllib.parse
 import json
 from PIL import Image,ImageTk
 from tkintermapview import TkinterMapView
+import telepot
 
 from PlayerInformation import *
 from SubWindow import *
@@ -17,11 +18,13 @@ from PCroom import PCInfo
 #던전앤파이터용 데이터
 api_server_d = "api.neople.co.kr"
 api_image_server_d = "img-api.neople.co.kr"
-service_key_d = "XseeTsrayJvhvwg8IATRWhpPXb2nZ2DP"
+service_key_d = "여기에 neople 던파 서비스 키 입력"
 
 #경기도 pc방
 api_server_pc = "openapi.gg.go.kr"
-service_key_pc = "6a89a2e6edcd400a9bc460e5db75df65"
+service_key_pc = "여기에 경기 데이터 서비스 키 입력"
+
+service_key_tele = '여기에 텔레그램 봇 apikey 입력'
 
 #던전앤파이터 검색용 요소들
 serverId = ""
@@ -39,6 +42,8 @@ class DUN:
     InfomationWindow = CharacterInformation()
     PCroomList = []
     def __init__(self):
+        self.bot = telepot.Bot(service_key_tele)
+        self.bot.message_loop(self.handle)
         window = Tk()
         window.title("-던-")
         window.geometry("800x600")
@@ -123,6 +128,8 @@ class DUN:
         self.graphCanvas.place(x=50, y=110)
 
         # 3번 노트패드
+        self.page3 = PhotoImage(file="resource/Zelva_pix_0300.png")
+        Label(self.frame3, image=self.page3).place(x=-600, y=-200)
         conn = http.client.HTTPSConnection(api_server_pc)
         conn.request("GET", "/GameSoftwaresFacilityProvis?KEY=" + service_key_pc+"&Type=json&pIndex=&pSize")
         result = conn.getresponse().read().decode('utf-8')
@@ -302,4 +309,48 @@ class DUN:
         self.PCWGSX.configure(text="위도: " + self.PCroomList[tt].WGS_LAT)
         self.PCWGSY.config(wraplength=300)
         self.PCWGSY.configure(text="경도: "+self.PCroomList[tt].WGS_LOGT)
+
+    def handle(self, msg):
+        content_type, chat_type, chat_id = telepot.glance(msg)
+        if content_type != 'text':
+            self.bot.sendMessage(chat_id, "텍스트만 입력해주세요.")
+            return
+        text = msg['text']
+        args = text.split(' ')
+        if len(args) != 2:
+            self.bot.sendMessage(chat_id, '양식대로 입력해주세요! - [서버 캐릭터이름]\n입력 예시 -> 힐더 농담이\n 서버 목록은 다음과 같습니다 =\n[카인, 힐더, 프레이, 카시야스, 디레지에, 안톤, 바칼, 시로코]')
+            return
+        b = False
+        for server in self.Game_servers['rows']:
+            if server['serverName'] == args[0]:
+                serverId = server['serverId']
+                b = True
+                break
+        if not b:
+            self.bot.sendMessage(chat_id,
+                                 '양식대로 입력해주세요! - [서버 캐릭터이름]\n입력 예시 -> 힐더 농담이\n 서버 목록은 다음과 같습니다 =\n[카인, 힐더, 프레이, 카시야스, 디레지에, 안톤, 바칼, 시로코]')
+            return
+        characterName = urllib.parse.quote(args[1])
+        conn = http.client.HTTPSConnection(api_server_d)
+        conn.request("GET", "/df/servers/"+serverId+"/characters?characterName="+characterName+"&jobId=&jobGrowId=&isAllJobGrow=&limit=&wordType=match&apikey="+service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        searchResult = json.loads(result)
+        if len(searchResult['rows']) == 0:
+            self.bot.sendMessage(chat_id, "해당 이름을 가진 캐릭터는 입력하신 서버에 없습니다.")
+            return
+        characterId = searchResult['rows'][0]['characterId']
+        conn = http.client.HTTPSConnection(api_server_d)
+        conn.request("GET", "/df/servers/"+serverId+"/characters/"+characterId+"/equip/equipment?apikey="+service_key_d)
+        result = conn.getresponse().read().decode('utf-8')
+        RChar = json.loads(result)
+        equip = list()
+        for eq in RChar['equipment']:
+            estr = ""
+            estr += eq['slotName'] +" - " +eq['itemName']
+            equip.append(estr)
+        outputMessage = "서버: "+ args[0] +", 캐릭터: " +args[1]+"\n장착 장비\n"
+        for s in equip:
+            outputMessage += s + "\n"
+        self.bot.sendMessage(chat_id, outputMessage)
+
 DUN()
