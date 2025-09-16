@@ -3,33 +3,23 @@
 ## 개요
 + 스크립트 언어 교과 텀 프로젝트로 제작한 Python 프로그램
 + Neople이 제공하는 OpenAPI를 이용해 유저 캐릭터의 정보를 검색하는 검색 프로그램
-+ 경기 
++ 경기 OpenAPI를 이용해 경기도에 존재하는 PC방 검색 기능 제공
++ 텔레그렘 봇 연동과 C++ 연동 기능 포함
 
 ## 제작 목적
-DXR을 이용한 레이트레이싱과 IOCP 서버를 이용해 고퀄리티 3D 게임을 제작해보며 Direct3D 12의 사용 능력과 IOCP 사용 능력을 향상시킨다.
+스크립트 언어 교과 시간에 배운 내용을 활용해 '던전앤파이터'게임 이용에 도움이 될만한 유저 검색 프로그램을 제작해본다.
 
 ## 개발 기간
-2025.01 ~ 2025.07 (약 7개월)
+2024.05.20 ~ 2024.06.12
 ## 개발 인원
-+ 김경환 - 클라이언트 프로그래머(프레임워크 제작, 렌더링 관리 등)
-+ 김도영 - 클라이언트 프로그래머(게임 조작, 플레이어 애니메이션, 상호 작용 등)
-+ 곽정민 - 서버 프로그래머
-## 게임 설명
-시연 영상 https://www.youtube.com/watch?v=OezWJPVzXQo
-
-그래픽스 소개 영상 https://youtu.be/4zQhTkB0FRM
++ 김경환(개인 제작)
+  
+## 프로그램 설명
++ 기획 발표 영상 https://youtu.be/D5yEKDYWZOg
++ 중간 발표 영상 https://youtu.be/W829YGu3TCA
++ 최종 발표 영상 https://youtu.be/kmq8P14tpK4
 
 ## 추가 사항
-클라이언트 소스파일
+컴파일을 원하시면 API를 받아 지정된 위치에 넣어주셔야 합니다.
 
-https://drive.google.com/file/d/1QCgWjl7ZBjCDZmhMN82MpkzA5qrswehr/view?usp=drive_link
-
-서버 소스파일
-
-https://drive.google.com/file/d/1Mo672DJSLs0-th0OZBEskjqNM_KkDjuH/view?usp=drive_link
-
-실행파일의 실행을 원하시면 각각의 소스파일을 압축 해제해 나온 src폴더를 각각의 실행파일 폴더에 넣고(Client, Server)실행하면 됩니다.
-
-서버를 실행 후 서버 컴퓨터의 ip를 입력해 접속합니다.
-
-같은 네트워크를 사용하는 경우에만 서버와의 연결이 가능합니다.
+프로그램이 선계 시즌에 제공되던 API를 이용했기에 현재는 정상 작동하지 않을 수 있습니다.
